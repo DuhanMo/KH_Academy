@@ -19,6 +19,8 @@
   </p>
   <ul>
     <li><a href="el.do">01_EL이란?</a> </li>
+    <!--<li><a href="views/01_el/02_elOperation.jsp">02_EL 연산자</a> </li>-->
+    <li><a href="elOperation.do">02_EL 연산자</a> </li>
   </ul>
   </body>
 
