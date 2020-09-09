@@ -120,10 +120,10 @@ result는 session영역에 30 하나 request영역에 9999 하나 총 두가지�
 <%--<% for(int i=1; i<=10; i++) {%>--%>
 <%--<%}%>--%>
 
-<c:forEach var="i" begin="1" end="10"  >
+<c:forEach var="i" begin="1" end="10">
     반복확인 : ${i}<br>
 </c:forEach>
-<c:forEach var="i" begin="1" end="6" >
+<c:forEach var="i" begin="1" end="6">
     <h${i}>태그 안에서도 el 사용이 가능하다</h${i}>
 </c:forEach>
 <c:forEach var="i" begin="1" end="10" step="2">
@@ -135,9 +135,9 @@ result는 session영역에 30 하나 request영역에 9999 하나 총 두가지�
 
 <%
     ArrayList<Person> list = new ArrayList<>();
-    list.add(new Person("홍길동",20,'남'));
-    list.add(new Person("김순희",21,'여'));
-    list.add(new Person("김철수",33,'남'));
+    list.add(new Person("홍길동", 20, '남'));
+    list.add(new Person("김순희", 21, '여'));
+    list.add(new Person("김철수", 33, '남'));
     pageContext.setAttribute("list", list);
 %>
 <table border="1">
@@ -148,7 +148,7 @@ result는 session영역에 30 하나 request영역에 9999 하나 총 두가지�
         <th>나이</th>
         <th>성별</th>
     </tr>
-<%--    <%  %>--%>
+    <%--    <%  %>--%>
     <c:forEach var="p" items="${list}" varStatus="status">
         <tr>
             <td>${status.index}</td><!-- 0부터 시작-->
@@ -158,7 +158,41 @@ result는 session영역에 30 하나 request영역에 9999 하나 총 두가지�
             <td>${p.gender}</td>
         </tr>
     </c:forEach>
-<%--    %>--%>
+    <%--    %>--%>
 </table>
+<hr>
+<h3>5. forTokens(c:forTokens var="" items="" delims="")</h3>
+<pre>
+    - 문자열에 포함된 구분자를 이용해서 토큰을 분리하여 반복처리
+    - String.split() 또는 StringTokenizer와 비슷한 기능
+    - items 속성에는 토큰을 포함하는 문자열을 지정하고,
+        delims 속성에는 토큰을 분리하는데 사용할 구분자를 기술(여러개 기술 가능)
+</pre>
+<c:set var="device">
+    컴퓨터,핸드폰.TV/에어컨,냉장고.세탁기
+</c:set>
+<ul>
+    <c:forTokens var="d" items="${device}" delims=",./">
+        <li>${d}</li>
+    </c:forTokens>
+</ul>
+<h3>6.url(c:url var="" value="")</h3>
+<pre>
+    &lt;c:url var="" value="" &gt;
+        &lt;c:param name="" value="" /&gt;
+        &lt;c:param name="" value="" /&gt;
+    &lt;/c:url&gt;
+
+    - url 경로를 생성하고 해당 url의 param 속성을 선언하여 쿼리스트링을 정의할 수 있는 태그
+</pre>
+
+<c:url var="url" value="testPage.jsp">
+    <c:param name="pName" value="LG그램"/>
+    <c:param name="price" value="1900000"/>
+    <c:param name="option" value="ssd512G"/>
+    <c:param name="option" value="ram16G"/>
+</c:url>
+<%--url = "testPage.jsp?pName=LG그램&preice=1900000&option=SSD512G&option=ram16G"--%>
+<a href="${url}">testPage</a>
 </body>
 </html>

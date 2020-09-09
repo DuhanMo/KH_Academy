@@ -34,5 +34,6 @@
 <h4>1. JSTL core Library</h4>
 변수와 조건문, 반복문, url 등의 로직과 관련된 JSTL 문법을 제공<br>
 <a href="01_core.jsp">01_core</a>
+
 </body>
 </html>
