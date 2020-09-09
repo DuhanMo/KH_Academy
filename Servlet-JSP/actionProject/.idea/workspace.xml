@@ -7,7 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dffebdba-6182-4d11-a398-f9d875e50aa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jstl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/02_standardAction/02_forward.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/02_standardAction/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/02_standardAction/forwardPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/03_jstl/jstl.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/actionProject_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/actionProject_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actionProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/actionProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,71 +31,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="42" column="59" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
+            <state relative-caret-position="269">
+              <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/01_el/02_elOperation.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/views/03_jstl/jstl.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+            <state relative-caret-position="509">
+              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#1485#1489#0#HTML" expanded="true" />
-                <element signature="e#1565#1569#0#HTML" expanded="true" />
-                <element signature="e#1645#1649#0#HTML" expanded="true" />
-                <element signature="e#1728#1732#0#HTML" expanded="true" />
+                <element signature="e#664#668#0#HTML" expanded="true" />
+                <element signature="e#717#721#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kh/controller/OperationServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/views/02_standardAction/02_forward.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kh/controller/ElServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/views/02_standardAction/forwardPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kh/model/vo/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-              <folding>
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
-                <element signature="e#445#446#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#506#507#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#567#568#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#674#675#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -96,8 +77,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -115,7 +96,12 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/kh/controller/OperationServlet.java" />
         <option value="$PROJECT_DIR$/web/views/01_el/02_elOperation.jsp" />
+        <option value="$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp" />
+        <option value="$PROJECT_DIR$/web/views/02_standardAction/footer.jsp" />
+        <option value="$PROJECT_DIR$/web/views/02_standardAction/forwardPage.jsp" />
+        <option value="$PROJECT_DIR$/web/views/02_standardAction/02_forward.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/views/03_jstl/jstl.jsp" />
       </list>
     </option>
   </component>
@@ -126,7 +112,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="320" />
     <option name="y" value="23" />
     <option name="width" value="1112" />
@@ -188,13 +174,17 @@
               <item name="actionProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="01_el" type="462c0819:PsiDirectoryNode" />
+              <item name="03_jstl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="actionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="actionProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="actionProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -216,7 +206,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -326,7 +316,7 @@
       <workItem from="1599547900635" duration="2504000" />
       <workItem from="1599550583003" duration="13000" />
       <workItem from="1599550760108" duration="1607000" />
-      <workItem from="1599552403843" duration="8691000" />
+      <workItem from="1599552403843" duration="12669000" />
     </task>
     <task id="LOCAL-00001" summary="20200908 KH수업 JSP:Expression Language">
       <created>1599550112264</created>
@@ -342,33 +332,40 @@
       <option name="project" value="LOCAL" />
       <updated>1599562293501</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="20200908 KH수업 JSP: Standard Action">
+      <created>1599563824051</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599563824051</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12815000" />
+    <option name="totallyTimeSpent" value="16793000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4971537" visible="true" weight="0.20171674" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49658704" visible="true" weight="0.20171674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.5028463" side_tool="true" visible="true" weight="0.20171674" />
+      <window_info id="Web" order="7" sideWeight="0.50341296" side_tool="true" weight="0.20171674" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31082803" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2939759" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32928476" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32866243" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -395,7 +392,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="20200908 KH수업 JSP:Expression Language" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200908 KH수업 JSP:Expression Language" />
+    <MESSAGE value="20200908 KH수업 JSP: Standard Action" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200908 KH수업 JSP: Standard Action" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/server-config.wsdd">
@@ -405,45 +403,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kh/model/vo/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-          <folding>
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kh/controller/ElServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/utf-8_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/01_el/01_el.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -464,24 +427,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kh/controller/ElServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kh/model/vo/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding>
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <folding>
+            <element signature="e#392#396#0#HTML" expanded="true" />
+            <element signature="e#418#422#0#HTML" expanded="true" />
+            <element signature="e#721#725#0#HTML" expanded="true" />
+            <element signature="e#747#751#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/02_standardAction/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/01_el/02_elOperation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="472">
           <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1485#1489#0#HTML" expanded="true" />
-            <element signature="e#1565#1569#0#HTML" expanded="true" />
-            <element signature="e#1645#1649#0#HTML" expanded="true" />
-            <element signature="e#1728#1732#0#HTML" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/01_el/01_el.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="73" column="32" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/02_standardAction/forwardPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/02_standardAction/02_forward.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" column="59" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
+        <state relative-caret-position="269">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/03_jstl/jstl.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="e#664#668#0#HTML" expanded="true" />
+            <element signature="e#717#721#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -496,6 +532,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -503,7 +540,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (actionProject)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -562,6 +599,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>jstl</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

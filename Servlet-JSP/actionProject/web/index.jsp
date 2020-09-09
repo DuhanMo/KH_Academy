@@ -41,6 +41,15 @@
     JSP 페이지에서 바로 사용 가능하고 태그 앞에 jsp: 접두어가 붙는다.
 </p>
 <a href="views/02_standardAction/01_include.jsp">01_include</a>
+<a href="views/02_standardAction/02_forward.jsp">02_forward</a>
+<h3>2. 커스텀 액션(Custom action)</h3>
+<p>
+    별도의 라이브러리를 설치해야된다(제공되는 커스텀 액션이 있는데 대표적으로 jstl)<br>
+    뿐만 아니라 사용자가 직접 만들어서도 사용 가능하긴 하다.<br>
+    커스텀 액션은 모든 태그의 이름앞에 jsp: 외의 접두어가 붙는다.
+
+</p>
+<a href="views/03_jstl/jstl.jsp">jstl</a>
 </body>
 
 </html>
