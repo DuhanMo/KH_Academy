@@ -39,7 +39,8 @@ currency    : <fmt:formatNumber value="50000" type="currency" currencySymbol="�
     <li>Long : <fmt:formatDate value="${current}" type="both" dateStyle="long" timeStyle="long"/> </li>
     <li>Medium : <fmt:formatDate value="${current}" type="both" dateStyle="medium" timeStyle="medium" /> </li>
     <li>short : <fmt:formatDate value="${current}" type="both" dateStyle="short" timeStyle="short" /> </li>
-    <li>내 타입 : </li>
+    <li>내 패턴 :   <fmt:formatDate value="${current }"
+                                 type="both" pattern="yyyy-MM-dd(E) HH:mm:ss(a)"/></li>
 </ul>
 </body>
 </html>
