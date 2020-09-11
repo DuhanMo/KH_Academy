@@ -2,5 +2,38 @@
         <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
                 "http://mybatis.org/dtd/mybatis-3-config.dtd" >
 
-
-<configuration></configuration>
+<!--
+    * configuration
+    마이바티스 설정과 관련된 기본 셋팅들을 선언할 수 있는 영역
+    ***** 주의 *****
+    configuration 내부에서 작성되는 엘리먼트들도 순서갖 중요하다!!!
+-->
+<configuration>
+<!--    DB 연결할 설정에 대한 정보를 선언하는 부분-->
+<!--    default : 연결설정을 여러개 생성하여 아이디로 구분하고 기본으로 연결할 설정 정보를 설정하는 속성-->
+<!--    environment : id를 구분하여 연결할 DB를 여러개 구성할 수 있다.-->
+    <environments default="development">
+<!--        DataBase 연결할 설정 정보들을 선언 -->
+        <environment id="development">
+<!--            mybatis의 핵심이 되는 설정은 트랜잭션을 제어하기 위한 transactionManager 와 함께
+                데이터베이스 Connection 인스턴스를 가져오기 위한 dataSource를 포함
+                - JDBC : JDBC가 commit 과 rollback의 기능을 직접 사용하게 하는 옵션(수동 commit)
+                         트랜잭션의 스코프를 관리하기 위해 dataSource로부터 커넥션을 가져온다.
+                - MANAGED : 트랜잭션에 대해 어떠한 영향도 행사하지 않는다는 옵션(자동 commit)
+                            컨테이너가 트랜잭션의 모든 생명주기를 관리한다. 디폴트로 커넥션을 닫아준다.
+-->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+<!--                연결에 필요한 정보를 property로 등록한다.-->
+<!--                name은 key에 해당하고 value가 value에 해당한다.-->
+<!--                정보들을 적용시키는 방법에는 두가지가 존재-->
+<!--                1. driver, url, username,password 정보들을 직접 작성-->
+                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+                <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+                <property name="username" value="MYBATIS"/>
+                <property name="password" value="MYBATIS"/>
+<!--                2. driver.properties 파일을 만들어줘서 연결해주는 방식 -->
+            </dataSource>
+        </environment>
+    </environments>
+</configuration>

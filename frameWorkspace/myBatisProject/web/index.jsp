@@ -65,6 +65,41 @@
        4. 동적쿼리 지원
         - 쿼리문 작성 시 if, choose ,trim, foreach문을 지원한다.
        5. 자바 어노테이션 지원.
-  --%>
+
+ <%--
+       * 환경 설정
+       1. Workspace 셋팅 먼저 -> JSP/Servlet에서 했던 작업 그대로
+       2. jstl, ojdbc6라이브러리 추가
+       3. myBatis 사용 위해 myBatis 관련 라이브러리 추가
+          -> myBatis 한국 사이트 방문(https://mybatis.org/mybatis-3/ko/index.html)
+          -> 시작하기 -> myBatis-x.x.x.jar 클릭 -> github로 이동 -> 3.4.6버전 찾기(필요한 버전에 따라 다운받기)
+       4. Java Resources -> New -> Source Folder -> 추가(name: resources)
+       5. resources 폴더 안에 mybatis-config.xml 생성
+          >> mybatis-config.xml 설정 파일 생성 시 DTD(문서타입정의) 설정 해두면, myBatis 관련 xml 파일을 설정할 때 재사용할 수 있다.
+          * DTD : xml 문서의 구조 및 해당 문서에서 사용할 수 있는 적법한 요소와 속성을 정의 -> 이 문서가 유효한지 유효성 검사도 됨
+            >> DTD 설정하기
+            1) Window - preferences - XML - XML Catalog - User Specified Entries - Add
+               - Config
+                 Location : http://mybatis.org/dtd/mybatis-3-config.dtd
+                 key Type : Public ID
+                 key : -//mybatis.org//DTD Config 3.0//EN
+               - Mapper
+                 Location : http://mybatis.org/dtd/mybatis-3-mapper.dtd
+                 key Type : Public ID
+                 key : -//mybatis.org//DTD Mapper 3.0//EN
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration></configuration>
+
+            >> dtd 파일로부터 xml 파일 생성
+            1) resources 오른쪽 버튼 - Next - XML File - Next
+            2) Create XML file frome a DTD File을 체크 - Next
+            3) Select XML Catalog entry - 해당 entry 선택 - 생성
+
+            >> 이 설정 파일은 이후 SqlSessionFactory 객체 생성 시 읽어가게 됨
+     --%>
+
   </body>
 </html>
