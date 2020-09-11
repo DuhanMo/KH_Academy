@@ -6,7 +6,7 @@
   Time: 16:03
   To change this template use File | Settings | File Templates.
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Standard Action - Include</title>
@@ -23,8 +23,6 @@
 <%--    <%@include file="footer.jsp"%>--%>
 
     문제점 : 현재페이지와 include한 페이지의 변수명 중복이 생길 경우 오류(유지보수에 불편)
-    <%String year1 = "2020";%>
-    <%=year1%>
 </pre>
 
 <h4> 2) JSP Action Tag include(동적 include 방식)</h4>
@@ -34,8 +32,10 @@
 
     특징 1: include 된페이지와 변수를 공유하지 않아 유지보수에 편리하다.
     <jsp:include page="footer.jsp"/>
+    <c:set var="year" value="2020000"/>
     <% String year="2020";%>
-    <%=year%>
+<%--    <%=year%>--%>
+    이건 뭔가? ${year}
 
     특징 2: include 된 페이지로 값을 전달할 수 있다.
     <jsp:include page="footer.jsp">
