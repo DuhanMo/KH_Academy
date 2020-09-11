@@ -41,6 +41,7 @@
 학원명 : ${academy}<br>
 강의장 : ${classRoom}<br>
 강사 : ${teacher.name}, ${teacher.age}, ${teacher.gender}<br>
+강사 객체 : ${teacher}<br>
 
 <br><br>
 수강생 정보
@@ -77,6 +78,8 @@ EL은 pageScope -> requestScope -> sessionScope -> applicationScope 순으로
     pageContext.setAttribute("scope", "page 영역");
 
 %>
+${pageContext.setAttribute("scope2","page 영역이요 ^_^")}
+pageScope (el로 pageContext설정) : ${scope2} <br>
 pageScope : ${pageScope.scope} <br>
 requestScope : ${requestScope.scope}<br>
 sessionScope : ${sessionScope.scope}<br>
