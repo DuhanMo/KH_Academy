@@ -100,6 +100,14 @@
 
             >> 이 설정 파일은 이후 SqlSessionFactory 객체 생성 시 읽어가게 됨
      --%>
-
+  <!--  jsp/servlet 에서는 매번 request.getContextPath() 를 작성하여 ContextPath(프로젝트명)을 찾아왔다.
+        매번 귀찮으니깐 c:set을 이용하여 application 객체에 ContextPath경로를 contextPath라는 변수에 담아주자(전역변수의 개념..)-->
+  <c:set var="contextPath" value="${pageContext.servletContext.contextPath}" scope="application"/>
+  <a href="${contextPath}/WEB-INF/views/main/main.jsp">메인으로</a>
+  <!--WEB-INF 폴더는 WAS 서버가 관리하는 폴더이기 때문에 views폴더가 web-inf 안에 있는 겨ㅑㅇ우
+      WEB server를 거치는 방식인 url창을 통해 접근할 수 없고,
+      직접 WAS 서버에서 경로를 이동하는 방식인 forward를 통해서만 접근할 수 있다.
+  -->
+  <jsp:forward page="WEB-INF/views/main/main.jsp"/>
   </body>
 </html>
