@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55e343d0-38bf-4612-a718-53296de7ea9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/mapper/member-mapper.xml.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/mapper/member-mapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/common/Template.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/common/Template.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/member/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/member/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/member/model/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/member/model/service/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +59,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mybatis-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="465">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/mapper/member-mapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -89,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mapper/member-mapper.xml.tld">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" lean-forward="true" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="75">
+              <caret line="5" column="9" lean-forward="true" selection-end-line="5" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -115,6 +121,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>scope</find>
+      <find>Config 3.0</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/common/member.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/common/errorPage.jsp" />
@@ -138,6 +144,8 @@
         <option value="$PROJECT_DIR$/src/com/kh/member/controller/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java" />
         <option value="$PROJECT_DIR$/resources/mapper/member-mapper.xml.tld" />
+        <option value="$PROJECT_DIR$/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/resources/mapper/member-mapper.xml" />
       </list>
     </option>
   </component>
@@ -391,12 +399,12 @@
       <workItem from="1599723669256" duration="33000" />
       <workItem from="1599723706372" duration="1291000" />
       <workItem from="1599725266163" duration="4398000" />
-      <workItem from="1600066297784" duration="8571000" />
+      <workItem from="1600066297784" duration="8787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15508000" />
+    <option name="totallyTimeSpent" value="15724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,6 +643,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="90" selection-start-line="90" selection-end-line="93" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -645,25 +660,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="90" selection-start-line="90" selection-end-line="93" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/mybatis-config.xml">
       <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="465">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/mapper/member-mapper.xml.tld">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" lean-forward="true" selection-end-line="5" selection-end-column="9" />
+        <state relative-caret-position="75">
+          <caret line="5" column="9" lean-forward="true" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mapper/member-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>

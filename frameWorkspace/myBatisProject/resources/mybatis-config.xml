@@ -36,4 +36,12 @@
             </dataSource>
         </environment>
     </environments>
+
+<!--    DB에 사용되는 쿼리문들을 담은 mapper파일들을 등록-->
+    <mappers>
+        <mapper resource="/mapper/member-mapper.xml"/>
+    </mappers>
+
+
+
 </configuration>
