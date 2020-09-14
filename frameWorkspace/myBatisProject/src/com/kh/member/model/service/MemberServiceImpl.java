@@ -20,6 +20,7 @@ public class MemberServiceImpl implements MemberService {
         // 마이바티스에서는 Connection 객체 대신에 SqlSession이라는 객체를 생성해서 사용.
         SqlSession session = getSqlSession();
 
+        Member loginUser = mDao.selectMember(session, mem);
 
         return null;
     }

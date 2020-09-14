@@ -1,5 +1,6 @@
 package com.kh.member.controller;
 
+import com.kh.member.model.service.MemberServiceImpl;
 import com.kh.member.model.vo.Member;
 
 import javax.servlet.ServletException;
@@ -24,7 +25,8 @@ public class LoginServlet extends HttpServlet {
         mem.setUserId(userId);
         mem.setUserPwd(userPwd);
 
-
-
+        // 결속성을 낮추기 위해
+//        Member loginUser = new MemberService().selectMember(mem);
+        Member loginUser = new MemberServiceImpl().selectMember(mem);
     }
 }

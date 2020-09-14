@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 
+
 public class Template {
 
     public static SqlSession getSqlSession() {
@@ -35,4 +36,7 @@ public class Template {
         }
         return session;
     }
+
+    //commit(), rollback(), close() --> 함수들은 마이바티스에서 제공을 해준다
+    // Statement관련, ResultSet관련 부분도 변경된다.(사용x)
 }
