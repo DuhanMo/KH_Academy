@@ -14,10 +14,8 @@
     -->
     <resultMap id="memberResultSet" type="com.kh.member.model.vo.Member">
         <!--        property : 자바의 필드변수 이름/ column : DB의 해당컬럼-->
-
         <!-- DB에서의 기본키 -->
         <id property="mId" column="MID"/>
-
         <!-- DB의 일반 컬럼들 -->
         <result property="userId" column="USER_ID"/>
         <result property="userPwd" column="USER_PWD"/>
