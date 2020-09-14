@@ -4,6 +4,8 @@ import com.kh.member.model.dao.MemberDao;
 import com.kh.member.model.vo.Member;
 import org.apache.ibatis.session.SqlSession;
 
+import static com.kh.common.Template.getSqlSession;
+
 public class MemberServiceImpl implements MemberService {
     // MemberService를 실체화(implements)하게 된다면
     // MemberService인터페이스에 있는 추상 메소드를 여기서 구현시켜줘야 한다.
