@@ -9,6 +9,10 @@
     configuration 내부에서 작성되는 엘리먼트들도 순서갖 중요하다!!!
 -->
 <configuration>
+<!--    VO/DTO 객체의 풀네임을 일반클래스명으로 사용하기 위해 등록하는 별칭 선언-->
+    <typeAliases>
+        <typeAlias type="com.kh.member.model.vo.Member" alias="Member"/>
+    </typeAliases>
 <!--    DB 연결할 설정에 대한 정보를 선언하는 부분-->
 <!--    default : 연결설정을 여러개 생성하여 아이디로 구분하고 기본으로 연결할 설정 정보를 설정하는 속성-->
 <!--    environment : id를 구분하여 연결할 DB를 여러개 구성할 수 있다.-->
@@ -39,7 +43,7 @@
 
 <!--    DB에 사용되는 쿼리문들을 담은 mapper파일들을 등록-->
     <mappers>
-        <mapper resource="/mapper/member-mapper.xml"/>
+        <mapper resource="/mappers/member-mapper.xml"/>
     </mappers>
 
 

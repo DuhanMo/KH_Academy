@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="memberMapper">
+    <!--    1_2. ResultMap 적용시키기-->
+    <!--
+            resultMap 엘리먼트는 마이바티스에서 가장 중요하고 강력한 엘리먼트이다.
+            Resultset에서 데이터를 가져올 때 작성되는 JDBC 코드를 대부분 줄여주는 역할을 담당하고
+            DB와 자바클래스를 매핑시켜줄 때 보통 사용한다.
+
+            type : ResultSet을 담을 vo클래스명을 어떤 타입을 참조할 것인지 기술(alias 사용가능)
+            id : 해당 ResultMap의 고유 아이디 -> select 문에서의 resultMap값으로 사용하는 부분
+
+    -->
+    <resultMap id="memberResultSet" type="com.kh.member.model.vo.Member">
+        <!--        property : 자바의 필드변수 이름/ column : DB의 해당컬럼-->
+
+        <!-- DB에서의 기본키 -->
+        <id property="mId" column="MID"/>
+
+        <!-- DB의 일반 컬럼들 -->
+        <result property="userId" column="USER_ID"/>
+        <result property="userPwd" column="USER_PWD"/>
+        <result property="userName" column="USER_NAME"/>
+        <result property="email" column="EMAIL"/>
+        <result property="birthday" column="BIRTHDAY"/>
+        <result property="gender" column="GENDER"/>
+        <result property="phone" column="PHONE"/>
+        <result property="address" column="address"/>
+        <result property="enrollDate" column="ENROLL_DATe"/>
+        <result property="updateDate" column="UPDATE_DATE"/>
+        <result property="mStatus" column="M_STATUS"/>
+    </resultMap>
+
+
+    <!--    1. Select 구문 마이바티스에서 제공하는 엘리먼트들 insert,update, 등등 많음 -->
+    <!--    parameterType은 DAO에서 매개변수로 전해준 mem의 타입-->
+    <!--    resultType 은 내가 DB에서 받아올 결과의타입?-->
+    <!--    #{}는 다이렉트로 받아올수있는 변수명?-->
+    <!--
+            id : 외부(DAO)에서 참조하기 위한 쿼리문의 고유아이디
+            parameterType : 내부로 받을 객체(mybatis-config.xml에 설정된 alias 대체가능)
+            resultType/resultMap : 쿼리 실행 후에 조회된 결과(ResultSet)을 자바에서 사용되게끔 담게되는 객체
+
+            쿼리문은 기본적으로 preparedStatement 이다
+            ?(위치 홀더) 대신 직접 파라미터로 전달받은 객체의 값을 꺼낼 때 #{ 필드명 } 으로 값을 꺼낸다.
+
+            여러줄로 줄바꿈 문자를 섞어 사용도 가능하다.
+            단, 문장의 마침을 나타내는 세미콜론은 !!!!!여기서도 역시 에러를 발생시킴. 생략해야함.
+            -->
+    <select id="test" parameterType="com.kh.member.model.vo.Member" resultType="com.kh.member.model.vo.Member">
+        SELECT *
+        FROM MEMBER
+        WHERE USER_ID=#{userId}
+        AND USER_PWD=#{userPwd}
+    </select>
+    <!-- 1_3. ResultMap 적용 -->
+    <select id="loginMember" parameterType="Member" resultMap="memberResultSet">
+      SELECT *
+      FROM MEMBER
+      WHERE USER_ID= #{ userId }
+      AND USER_PWD= #{ userPwd }
+   </select>
+</mapper>

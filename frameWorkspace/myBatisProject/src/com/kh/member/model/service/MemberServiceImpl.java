@@ -22,6 +22,6 @@ public class MemberServiceImpl implements MemberService {
 
         Member loginUser = mDao.selectMember(session, mem);
 
-        return null;
+        return loginUser;
     }
 }

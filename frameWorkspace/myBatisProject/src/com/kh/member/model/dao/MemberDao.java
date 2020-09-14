@@ -16,7 +16,8 @@ public class MemberDao {
         // 첫번째 인자로 쿼리문이 존재하는 '매퍼의 네임스페이스.쿼리문아이디'
         // 두번째 인자로 쿼리문을 완성시킬 '객체'이다.
 
-        loginUser = session.selectOne("memberMapper.test",mem);
+        loginUser = session.selectOne("memberMapper.loginMember",mem);
+        System.out.println("loginUser" + loginUser);
         return loginUser;
     }
 }
