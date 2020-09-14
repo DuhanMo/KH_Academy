@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dffebdba-6182-4d11-a398-f9d875e50aa0" name="Default Changelist" comment="20200909 KH수업 JSP: JSTL">
-      <change beforePath="$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/03_jstl/01_core.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/03_jstl/01_core.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,6 +21,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/views/03_jstl/jstl.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/01_el/01_el.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -31,10 +40,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/03_jstl/03_fn.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="331">
               <caret line="41" column="30" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/03_jstl/02_fmt.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="42" column="87" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -58,11 +85,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/actionProject.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="211">
@@ -81,31 +103,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kh/controller/OperationServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kh/controller/ElServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="44" column="54" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/03_jstl/01_core.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-594">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="68">
+              <caret line="150" column="19" lean-forward="true" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -145,13 +146,13 @@
         <option value="$PROJECT_DIR$/web/views/02_standardAction/02_forward.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/views/03_jstl/123.html" />
-        <option value="$PROJECT_DIR$/web/views/03_jstl/01_core.jsp" />
         <option value="$PROJECT_DIR$/web/views/03_jstl/testPage.jsp" />
         <option value="$PROJECT_DIR$/web/views/03_jstl/jstl.jsp" />
         <option value="$PROJECT_DIR$/web/views/03_jstl/02_fmt.jsp" />
         <option value="$PROJECT_DIR$/web/views/03_jstl/03_fn.jsp" />
         <option value="$PROJECT_DIR$/web/views/01_el/01_el.jsp" />
         <option value="$PROJECT_DIR$/web/views/02_standardAction/01_include.jsp" />
+        <option value="$PROJECT_DIR$/web/views/03_jstl/01_core.jsp" />
       </list>
     </option>
   </component>
@@ -383,7 +384,7 @@
       <workItem from="1599550760108" duration="1607000" />
       <workItem from="1599552403843" duration="24818000" />
       <workItem from="1599652993185" duration="17000" />
-      <workItem from="1599822375306" duration="2269000" />
+      <workItem from="1599822375306" duration="4155000" />
     </task>
     <task id="LOCAL-00001" summary="20200908 KH수업 JSP:Expression Language">
       <created>1599550112264</created>
@@ -445,7 +446,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31228000" />
+    <option name="totallyTimeSpent" value="33114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="935" height="877" extended-state="0" />
@@ -461,7 +462,7 @@
       <window_info id="Web" order="7" sideWeight="0.50341296" side_tool="true" weight="0.20171674" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30828026" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30828026" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -550,27 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/03_jstl/jstl.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/03_jstl/02_fmt.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="87" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/03_jstl/03_fn.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kh/controller/ElServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -635,8 +615,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/03_jstl/01_core.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="68">
+          <caret line="150" column="19" lean-forward="true" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/03_jstl/02_fmt.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="42" column="87" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/03_jstl/03_fn.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/03_jstl/jstl.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>

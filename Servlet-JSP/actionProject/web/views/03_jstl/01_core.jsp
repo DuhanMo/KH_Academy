@@ -140,6 +140,12 @@ result는 session영역에 30 하나 request영역에 9999 하나 총 두가지�
     list.add(new Person("김철수", 33, '남'));
     pageContext.setAttribute("list", list);
 %>
+<c:set var="arr">
+    토끼, 사자, 호랑이, 당근, 51234, 기린, 하마
+</c:set>
+<c:forEach var="i" items="${arr}">
+    ${i} <br><br>
+</c:forEach>
 <table border="1">
     <tr>
         <th>번호</th>
