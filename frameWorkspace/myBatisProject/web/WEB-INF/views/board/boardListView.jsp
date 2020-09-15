@@ -9,9 +9,111 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <title>Title</title>
+    <style>
+        .outer {
+            width: 900px;
+            height: 500px;
+            background: black;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        .outer table {
+            border: 1px solid white;
+            text-align: center;
+        }
+
+        .outer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<jsp:include page="../common/menubar.jsp"/>
+<%-- 로그인한 회원만 게시물보기를 하기 위해서 조건을 추가--%>
+<c:if test="${empty loginUser}">
+    <c:set var="msg" value="로그인이 필요한 서비스입니다." scope="request"/>
+    <jsp:forward page="../common/errorPage.jsp"/>
+</c:if>
+<c:if test="${!empty loginUser}">
+    <div class="outer">
+        <br>
+        <h1 align="center">게시판</h1>
+        <!--게시글 리스트 보기-->
+        <table id="listArea" align="center">
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>조회수</th>
+                <th>작성일</th>
+            </tr>
+                <%-- forEach를 통해 request에 담겨있는 list를 하나씩 출력 --%>
+            <c:forEach var="b" items="${list}">
+                <tr>
+                    <td>${b.bId}</td>
+                    <td>${b.bTitle}</td>
+                    <td>${b.userName}</td>
+                    <td>${b.bCount}</td>
+                    <td>${b.bCreateDate}</td>
+                </tr>
+            </c:forEach>
+        </table>
+        <!-- 페이징 부분 -->
+        <div id="pagingArea" align="center">
+            <!-- [이전] -->
+            <c:if test="${ pi.currentPage <= 1 }">
+                [이전] &nbsp;
+            </c:if>
+
+            <c:if test="${ pi.currentPage > 1 }">
+                <c:url var="blistBack" value="list.bo">
+                    <c:param name="currentPage" value="${ pi.currentPage - 1 }"/>
+                </c:url>
+                <a href="${ blistBack }">[이전]</a>
+            </c:if>
+
+            <!-- [번호들] -->
+            <c:forEach var="p" begin="${ pi.startPage }" end="${ pi.endPage }">
+                <c:if test="${ p eq pi.currentPage }">
+                    <font color="red" size="4"><b>[${ p }]</b></font>
+                </c:if>
+
+                <c:if test="${ p ne pi.currentPage }">
+                    <c:if test="${ !empty sc }">
+                        <c:url var="blistPage" value="search.bo">
+                            <c:param name="currentPage" value="${ p }"/>
+                            <c:param name="condition" value="${ condition }"/>
+                            <c:param name="search" value="${ search }"/>
+                        </c:url>
+                    </c:if>
+                    <c:if test="${ empty sc }">
+                        <c:url var="blistPage" value="list.bo">
+                            <c:param name="currentPage" value="${ p }"/>
+                        </c:url>
+                    </c:if>
+                    <a href="${ blistPage }"> ${ p } </a>
+                </c:if>
+            </c:forEach>
+
+            <!-- [다음] -->
+            <c:if test="${ pi.currentPage >= pi.maxPage }">
+                &nbsp;[다음]
+            </c:if>
+
+            <c:if test="${ pi.currentPage < pi.maxPage }">
+                <c:url var="blistNext" value="list.bo">
+                    <c:param name="currentPage" value="${ pi.currentPage + 1 }"/>
+                </c:url>
+                <a href="${ blistNext }">[다음]</a>
+            </c:if>
+        </div>
+    </div>
+</c:if>
 </body>
 </html>

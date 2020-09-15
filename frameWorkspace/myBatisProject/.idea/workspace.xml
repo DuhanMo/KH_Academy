@@ -7,19 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55e343d0-38bf-4612-a718-53296de7ea9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/kh/board/controller/BoardListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/member/controller/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/member/controller/MemberInsertFormServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/member/controller/MemberInsertServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/board/boardListView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mappers/member-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mappers/member-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/member/model/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/member/model/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/member/model/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/member/model/service/MemberServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kh/member/model/vo/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/member/model/vo/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/common/menubar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/common/menubar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/board/boardListView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/board/boardListView.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/board/boardListView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+            <state relative-caret-position="498">
+              <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -401,12 +389,12 @@
       <workItem from="1599723706372" duration="1291000" />
       <workItem from="1599725266163" duration="4398000" />
       <workItem from="1600066297784" duration="17903000" />
-      <workItem from="1600160237267" duration="2541000" />
+      <workItem from="1600160237267" duration="3227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27381000" />
+    <option name="totallyTimeSpent" value="28067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/board/boardListView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+        <state relative-caret-position="498">
+          <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
         </state>
       </provider>
     </entry>
