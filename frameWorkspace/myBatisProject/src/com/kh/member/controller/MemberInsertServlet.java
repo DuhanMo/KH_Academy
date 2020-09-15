@@ -36,13 +36,13 @@ public class MemberInsertServlet extends HttpServlet {
         String userPwd = request.getParameter("userPwd");
         String userName = request.getParameter("userName");
         String email = request.getParameter("email");
-        String birthday = request.getParameter("birthDay");
+        String birthDay = request.getParameter("birthDay");
         String gender = request.getParameter("gender");
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
 
         // Service로 전송하기 위해 Member객체 생성
-        Member m = new Member(userId,userPwd,userName,email,birthday,gender,phone,address);
+        Member m = new Member(userId,userPwd,userName,email,birthDay,gender,phone,address);
         System.out.println(m);
 
         MemberService mService = new MemberServiceImpl();

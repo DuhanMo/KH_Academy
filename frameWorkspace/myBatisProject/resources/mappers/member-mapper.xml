@@ -21,7 +21,7 @@
         <result property="userPwd" column="USER_PWD"/>
         <result property="userName" column="USER_NAME"/>
         <result property="email" column="EMAIL"/>
-        <result property="birthday" column="BIRTHDAY"/>
+        <result property="birthDay" column="BIRTHDAY"/>
         <result property="gender" column="GENDER"/>
         <result property="phone" column="PHONE"/>
         <result property="address" column="address"/>
@@ -63,6 +63,6 @@
     <!-- 리턴되는 값은 정수형으로 변경된 행의 갯수를 리턴한다. -->
     <insert id="insertMember" parameterType="Member">
       insert into member
-      values(seq_mid.nextval,#{userId},#{userPwd},#{userName},#{email},#{birthday},#{gender},#{phone},#{address},SYSDATE,SYSDATE,DEFAULT)
+      values(seq_mid.nextval,#{userId},#{userPwd},#{userName},#{email},#{birthDay},#{gender},#{phone},#{address},SYSDATE,SYSDATE,DEFAULT)
    </insert>
 </mapper>

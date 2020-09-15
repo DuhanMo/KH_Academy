@@ -11,7 +11,7 @@ public class Member implements Serializable {
     private String userPwd;
     private String userName;
     private String email;
-    private String birthday;
+    private String birthDay;
     private String gender;
     private String phone;
     private String address;
@@ -22,13 +22,13 @@ public class Member implements Serializable {
     public Member() {
     }
 
-    public Member(int mId, String userId, String userPwd, String userName, String email, String birthday, String gender, String phone, String address, Date enrollDate, Date updateDate, String mStatus) {
+    public Member(int mId, String userId, String userPwd, String userName, String email, String birthDay, String gender, String phone, String address, Date enrollDate, Date updateDate, String mStatus) {
         this.mId = mId;
         this.userId = userId;
         this.userPwd = userPwd;
         this.userName = userName;
         this.email = email;
-        this.birthday = birthday;
+        this.birthDay = birthDay;
         this.gender = gender;
         this.phone = phone;
         this.address = address;
@@ -37,23 +37,23 @@ public class Member implements Serializable {
         this.mStatus = mStatus;
     }
 
-    public Member(int mId, String userId, String userPwd, String userName, String email, String birthday, String gender, String phone, String address) {
+    public Member(int mId, String userId, String userPwd, String userName, String email, String birthDay, String gender, String phone, String address) {
         this.mId = mId;
         this.userId = userId;
         this.userPwd = userPwd;
         this.userName = userName;
         this.email = email;
-        this.birthday = birthday;
+        this.birthDay = birthDay;
         this.gender = gender;
         this.phone = phone;
         this.address = address;
     }
-    public Member( String userId, String userPwd, String userName, String email, String birthday, String gender, String phone, String address) {
+    public Member(String userId, String userPwd, String userName, String email, String birthDay, String gender, String phone, String address) {
         this.userId = userId;
         this.userPwd = userPwd;
         this.userName = userName;
         this.email = email;
-        this.birthday = birthday;
+        this.birthDay = birthDay;
         this.gender = gender;
         this.phone = phone;
         this.address = address;
@@ -99,12 +99,12 @@ public class Member implements Serializable {
         this.email = email;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public String getBirthDay() {
+        return birthDay;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
     }
 
     public String getGender() {
@@ -163,7 +163,7 @@ public class Member implements Serializable {
                 ", userPwd='" + userPwd + '\'' +
                 ", userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
-                ", birthday='" + birthday + '\'' +
+                ", birthDay='" + birthDay + '\'' +
                 ", gender='" + gender + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
