@@ -92,5 +92,13 @@
         </table>
     </c:if>
 </div>
+
+<!-- 게시물 관련 서비스-->
+<div class="nav-area" align="center">
+    <div class="menu" onclick="location.href='${contextPath}';">HOME</div>
+    <div class="menu">공지사항</div>
+    <div class="menu" onclick="location.href='${contextPath}/list.bo';">게시판</div>
+    <div class="menu">etc</div>
+</div>
 </body>
 </html>

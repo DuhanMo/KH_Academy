@@ -7,7 +7,6 @@ public class MemberDao {
     public Member selectMember(SqlSession session, Member mem) {
         // 리턴용 멤버 객체 선언
         Member loginUser = null;
-
         // 보통이면 여기서부터 preparedStatement를 작성을 했음
         // 하지만 이 프로젝트에서는 마이바티스를 적용했기 때문에 sqlSession이 제공하는 메소드를 통해서 sql문을 실행 시킨다.
 
@@ -19,5 +18,10 @@ public class MemberDao {
         loginUser = session.selectOne("memberMapper.loginMember",mem);
         System.out.println("loginUser" + loginUser);
         return loginUser;
+    }
+
+    public int insertMember(SqlSession session, Member mem) {
+        int result = session.insert("memberMapper.insertMember",mem);
+        return result;
     }
 }

@@ -1,21 +1,56 @@
 package com.kh.filter;
 
-import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 
-@WebFilter(filterName = "EncodingFilter")
+/**
+ * Servlet Filter implementation class EncordingFilter
+ */
+@WebFilter("/*")
 public class EncodingFilter implements Filter {
+
+    /**
+     * Default constructor.
+     */
+    public EncodingFilter() {
+        // TODO Auto-generated constructor stub
+    }
+
+    /**
+     * @see Filter#destroy()
+     *
     public void destroy() {
+    // TODO Auto-generated method stub
     }
 
-    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        chain.doFilter(req, resp);
+    /**
+     * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+     */
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
         // 뷰에서 전달받은 값에 한글이 있을 경우
-        req.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
+
+        chain.doFilter(request, response);
     }
 
-    public void init(FilterConfig config) throws ServletException {
+    /**
+     * @see Filter#init(FilterConfig)
+     */
+    public void init(FilterConfig fConfig) throws ServletException {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void destroy() {
+        // TODO Auto-generated method stub
 
     }
 

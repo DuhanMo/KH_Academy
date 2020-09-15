@@ -48,6 +48,16 @@ public class Member implements Serializable {
         this.phone = phone;
         this.address = address;
     }
+    public Member( String userId, String userPwd, String userName, String email, String birthday, String gender, String phone, String address) {
+        this.userId = userId;
+        this.userPwd = userPwd;
+        this.userName = userName;
+        this.email = email;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.phone = phone;
+        this.address = address;
+    }
 
     public int getmId() {
         return mId;
