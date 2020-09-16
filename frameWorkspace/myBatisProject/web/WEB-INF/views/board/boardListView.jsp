@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!Doctype html>
 <html>
 <head>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -114,6 +115,19 @@
             </c:if>
         </div>
     </div>
+<%--    2. 상세보기--%>
+    <script>
+        $(function () {
+            $('#listArea').find('td').mouseenter(function () {
+                $(this).parents('tr').css({"background":"orangered","cursor":"pointer"});
+            }).mouseout(function () {
+                $(this).parents('tr').css({"background":"black"})
+            }).click(function () {
+                var bId = $(this).parents().children("td").eq(0).text();
+                location.href="detail.bo?Id="+bId;
+            });
+        });
+    </script>
 </c:if>
 </body>
 </html>

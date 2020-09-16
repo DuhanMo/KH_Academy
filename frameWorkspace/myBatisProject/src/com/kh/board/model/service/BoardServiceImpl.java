@@ -12,6 +12,7 @@ import static com.kh.common.Template.getSqlSession;
 public class BoardServiceImpl implements BoardService {
 
     private BoardDao bDao = new BoardDao();
+
     @Override
     public int getListCount() {
         SqlSession session = getSqlSession();
@@ -23,7 +24,31 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public ArrayList<Board> selectBoardList(PageInfo pl) {
-        return null;
+    public ArrayList<Board> selectBoardList(PageInfo pi) {
+        SqlSession session = getSqlSession();
+
+        ArrayList<Board> list = bDao.selectBoardList(session, pi);
+
+
+        session.close();
+        return list;
+    }
+
+    @Override
+    public Board selectBoardDetail(int bId) {
+        SqlSession session = getSqlSession();
+        // 1. 조회수 증가
+        int result = bDao.updateCount(session, bId);
+        // 2. 조회수 증가 성공 시 게시글 조회
+        Board b = null;
+        if(result > 0 ) {
+            session.commit();
+            b = bDao.selectBoardDetail(session,bId);
+        }else{
+            session.rollback();
+        }
+        session.close();
+
+        return b;
     }
 }
