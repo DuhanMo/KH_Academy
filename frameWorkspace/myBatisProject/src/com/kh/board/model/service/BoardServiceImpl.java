@@ -3,6 +3,7 @@ package com.kh.board.model.service;
 import com.kh.board.model.dao.BoardDao;
 import com.kh.board.model.vo.Board;
 import com.kh.board.model.vo.PageInfo;
+import com.kh.board.model.vo.SearchCondition;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.ArrayList;
@@ -50,5 +51,23 @@ public class BoardServiceImpl implements BoardService {
         session.close();
 
         return b;
+    }
+
+    @Override
+    public int getSearchResultListCount(SearchCondition sc) {
+        SqlSession session = getSqlSession();
+        int listCount = bDao.getSearchResultListCount(session,sc);
+        session.close();
+        return listCount;
+    }
+
+    @Override
+    public ArrayList<Board> selectSearchResultList(SearchCondition sc, PageInfo pi) {
+        SqlSession session = getSqlSession();
+
+        ArrayList<Board> list = bDao.selectSearchResultList(session, sc, pi);
+
+        session.close();
+        return list;
     }
 }

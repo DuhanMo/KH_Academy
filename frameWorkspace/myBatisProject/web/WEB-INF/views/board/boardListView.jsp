@@ -45,6 +45,22 @@
     <div class="outer">
         <br>
         <h1 align="center">게시판</h1>
+
+<%--        게시물 검색하기 --%>
+        <div id="searchArea" align="center">
+            <form action="${contextPath}/search.bo">
+                <select id="searchCondition" name="condition">
+                    <option>----------</option>
+                    <option value="writer">작성자</option>
+                    <option value="title">제목</option>
+                    <option value="content">내용</option>
+                </select>
+                <input type="search" name="search">
+                <button>검색하기</button>
+            </form>
+        </div>
+        <br>
+        <br>
         <!--게시글 리스트 보기-->
         <table id="listArea" align="center">
             <tr>
@@ -117,14 +133,16 @@
     </div>
 <%--    2. 상세보기--%>
     <script>
-        $(function () {
-            $('#listArea').find('td').mouseenter(function () {
-                $(this).parents('tr').css({"background":"orangered","cursor":"pointer"});
-            }).mouseout(function () {
-                $(this).parents('tr').css({"background":"black"})
-            }).click(function () {
+        $(function(){
+            $('#listArea').find("td").mouseenter(function(){
+                $(this).parents("tr").css({"background":"orangered","cursor":"pointer"});
+
+            }).mouseout(function(){
+                $(this).parents("tr").css({"background":"black"});
+
+            }).click(function(){
                 var bId = $(this).parents().children("td").eq(0).text();
-                location.href="detail.bo?Id="+bId;
+                location.href="detail.bo?bId="+bId;
             });
         });
     </script>

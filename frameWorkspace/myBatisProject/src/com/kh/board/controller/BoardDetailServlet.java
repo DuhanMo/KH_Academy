@@ -26,6 +26,7 @@ public class BoardDetailServlet extends HttpServlet {
 
         request.setAttribute("rCount",b.getReplyList().size());
         request.setAttribute("b",b);
+        request.getRequestDispatcher("WEB-INF/views/board/boardDetailView.jsp").forward(request,response);
 
 
     }

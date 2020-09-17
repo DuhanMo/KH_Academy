@@ -36,7 +36,7 @@
         <result property="bTitle" column="BTITLE"/>
         <result property="bContent" column="BCONTENT"/>
         <result property="bWriter" column="BWRITER"/>
-<!--        B_USER_NAME 은 원래 USER_NAME으로 복사붙여넣기한거.-->
+        <!--        B_USER_NAME 은 원래 USER_NAME으로 복사붙여넣기한거.-->
         <result property="userName" column="B_USER_NAME"/>
         <result property="bCount" column="BCOUNT"/>
         <result property="bCreateDate" column="B_CREATE_DATE"/>
@@ -44,21 +44,21 @@
         <result property="bStatus" column="B_STATUS"/>
 
         <collection property="replyList" javaType="java.util.ArrayList" resultMap="replyResultSet"/>
-<!--        방금 쓰던 id,result 가 아닌 collection을 가지고 작업하게 되며 Board클래스의 필드인 replyList(ArrayList)에 매핑시킨다.-->
+        <!--        방금 쓰던 id,result 가 아닌 collection을 가지고 작업하게 되며 Board클래스의 필드인 replyList(ArrayList)에 매핑시킨다.-->
     </resultMap>
 
     <!--    1_1. 게시글 수 조회용 쿼리문 -->
     <select id="selectListCount" resultType="_int">
         SELECT COUNT(*)
         FROM BOARD
-        WHERE B_STATUS='Y'
+        WHERE B_STATUS = 'Y'
     </select>
     <!--    1_2. 게시글 목록 조회용 쿼리문 -->
     <select id="selectBoardList" resultMap="blistResultSet">
         SELECT *
         FROM BOARD B
-        JOIN MEMBER M ON(B.BWRITER = M.MID)
-        WHERE B_STATUS='Y'
+                 JOIN MEMBER M ON (B.BWRITER = M.MID)
+        WHERE B_STATUS = 'Y'
         ORDER BY BID DESC
     </select>
 
@@ -66,21 +66,83 @@
     <update id="updateBoardCount">
         UPDATE BOARD
         SET BCOUNT = BCOUNT + 1
-        WHERE BID=#{bId}
+        WHERE BID = #{bId}
     </update>
 
     <!--상세보기용 쿼리문 -->
     <select id="selectBoardDetail" resultMap="bdetailResultSet">
-        SELECT BID,BTYPE,BTITLE,BCONTENT,M.USER_NAME AS B_USER_NAME,
-             BCOUNT,B_CREATE_DATE,B_MODIFY_DATE,B_STATUS,
-              RID,RCONTENT,REF_BID,M2.USER_NAME AS R_USER_NAME,
-             R_CREATE_DATE,R_MODIFY_DATE,R_STATUS
-         FROM BOARD B
-         JOIN MEMBER M ON (B.BWRITER = M.MID)
-         LEFT JOIN REPLY R ON (B.BID = R.REF_BID)
-         LEFT JOIN MEMBER M2 ON (R.RWRITER = M2.MID)
-         WHERE B.BID = #{bId}
-        AND B_STATUS='Y'
+        SELECT BID,
+               BTYPE,
+               BTITLE,
+               BCONTENT,
+               M.USER_NAME  AS B_USER_NAME,
+               BCOUNT,
+               B_CREATE_DATE,
+               B_MODIFY_DATE,
+               B_STATUS,
+               RID,
+               RCONTENT,
+               REF_BID,
+               M2.USER_NAME AS R_USER_NAME,
+               R_CREATE_DATE,
+               R_MODIFY_DATE,
+               R_STATUS
+        FROM BOARD B
+                 JOIN MEMBER M ON (B.BWRITER = M.MID)
+                 LEFT JOIN REPLY R ON (B.BID = R.REF_BID)
+                 LEFT JOIN MEMBER M2 ON (R.RWRITER = M2.MID)
+        WHERE B.BID = #{bId}
+          AND B_STATUS = 'Y'
         ORDER BY RID DESC
+    </select>
+    <!-- 3_1. 검색 결과 게시글 수 조회용 쿼리문 -->
+    <select id="selectSearchResultCount" resultType="_int">
+        SELECT COUNT(*)
+        FROM BOARD B
+        JOIN MEMBER M ON(B.BWRITER = M.MID)
+        WHERE B_STATUS = 'Y'
+        <!-- if문으로 하는 방법 -->
+        <if test="writer != null">
+            AND USER_NAME LIKE '%' || #{writer} || '%'
+        </if>
+        <if test="title != null">
+            AND BTITLE LIKE '%' || #{title} || '%'
+        </if>
+        <if test="content != null">
+            AND BCONTENT LIKE '%' || #{content} || '%'
+        </if>
+    </select>
+
+    <!--    3_2. 검색 결과 게시물 목록 조회용 쿼리문 -->
+    <select id="selectSearchResultList" resultMap="blistResultSet">
+        -- 2.choose, when, otherwise로 하는 방법
+        <!--
+            만약 쿼리문을 평소와 같이 그냥 작성한다면
+            안에 <, > 라는 기호가 포함된다면 연산자로 인식하지않고 태그로 인식해버린다.
+            CDATA주석으로 감싸야한다.
+            <![CDATA[...]]>
+             <![CDATA[
+                SELECT *
+                FROM MEMBER
+                WHERE AGE > 10
+                ]]>
+        -->
+        SELECT *
+        FROM BOARD B
+        JOIN MEMBER M ON(B.BWRITER = M.MID)
+        WHERE B_STATUS='Y'
+        <choose>
+            <when test="writer != null">
+                AND USER_NAME LIKE '%' || #{writer} || '%'
+            </when>
+            <when test="title != null">
+                AND BTITLE LIKE '%' || #{title} || '%'
+            </when>
+            <when test="content != null ">
+                AND BCONTENT LIKE '%' || #{content} || '%'
+            </when>
+
+        </choose>
+        ORDER BY BID DESC
     </select>
 </mapper>

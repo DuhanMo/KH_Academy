@@ -2,6 +2,7 @@ package com.kh.board.model.dao;
 
 import com.kh.board.model.vo.Board;
 import com.kh.board.model.vo.PageInfo;
+import com.kh.board.model.vo.SearchCondition;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 
@@ -51,5 +52,22 @@ public class BoardDao {
         // bId에 해당하는 게시글을 조회해 오는데 이 때 그 해당 게시글에 달려있는 댓글도 다 조회하자
         Board b = session.selectOne("boardMapper.selectBoardDetail",bId);
         return b;
+    }
+
+    public int getSearchResultListCount(SqlSession session, SearchCondition sc) {
+        int listCount = session.selectOne("boardMapper.selectSearchResultCount",sc);
+        System.out.println("listCount : " + listCount);
+        return listCount;
+    }
+
+    public ArrayList<Board> selectSearchResultList(SqlSession session, SearchCondition sc, PageInfo pi) {
+        ArrayList<Board> list = null;
+
+        int offset = (pi.getCurrentPage()-1)*pi.getBoardLimit();
+
+        RowBounds rowBounds = new RowBounds(offset,pi.getBoardLimit());
+
+        list = new ArrayList<Board>(session.selectList("boardMapper.selectSearchResultList", sc, rowBounds));
+        return list;
     }
 }
