@@ -1,0 +1,5 @@
+<!--
+ * pom.xml의 구조
+  project{프로젝트 정보 + propoerties + (repository: 사설저장소) + dependencies + build}
+
+ -->
