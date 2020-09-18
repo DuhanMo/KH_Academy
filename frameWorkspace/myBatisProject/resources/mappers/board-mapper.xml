@@ -142,6 +142,7 @@
                 AND BCONTENT LIKE '%' || #{content} || '%'
             </when>
 
+
         </choose>
         ORDER BY BID DESC
     </select>
