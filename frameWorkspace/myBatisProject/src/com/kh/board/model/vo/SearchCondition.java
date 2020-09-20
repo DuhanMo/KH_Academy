@@ -32,7 +32,7 @@ public class SearchCondition {
     public String getContent() {
         return content;
     }
-
+//commit
     public void setContent(String content) {
         this.content = content;
     }
