@@ -1,4 +1,4 @@
-package com.kh.corePractice03_javaConfig;
+package com.kh.corePractice03_xmlConfig;
 
 public class PersonalAccount implements Account {
 	private int bankCode;
@@ -6,8 +6,8 @@ public class PersonalAccount implements Account {
 	private String accPwd;
 	private int balance=0;
 	
-	public PersonalAccount() {
-	}
+//	public PersonalAccount() {
+//	}
 	
 	public PersonalAccount(int bankCode, String accNo, String accPwd) {
 		super();
