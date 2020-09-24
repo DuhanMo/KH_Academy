@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <!-- Root Context: defines shared resources visible to all other web components -->
+      
+   <!-- 
+      root-context.xml 파일은 서버 구동 시 web.xml을 거쳐 바로 로딩 되는
+      pre-loading되는 설정 파일이다.
+      따라서 서버 구동 시 바로 셋팅 해야 되는 내용물을 작성하는 설정 파일로
+      보통 DB연결 설정, 트랜잭션 처리, AOP 관련, 내외부 모듈 연동 등 
+      스프링에서 제공하는 서비스들에 대한 설정들을 관리한다.
+    -->   
+   
+   <!--
+       기존에 mybatis-config.xml에 작성했던 DB정보 관련 부분 여기에 작성한다. 
+      why? 서버 구동됨과 동시에 이루어지게끔
+      
+      =================================================================
+      1. DataSource 등록
+      
+      destroy-method는 주어진 세션을 자동으로 close 하라는 의미 (service에서 close 안해줘도 된다.)   
+   -->
+   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+      <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+      <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+      <property name="username" value="spring"/>
+      <property name="password" value="spring"/>
+      <property name="defaultAutoCommit" value="false"/>
+   </bean>
+   
+   <bean id="SqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+      <!-- mybatis-config.xml 설정 불러온다. -->
+      <property name="configLocation" value="classpath:mybatis-config.xml"/>
+      <property name="dataSource" ref="dataSource"/>
+   </bean>
+   
+   <bean id="SqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+      <constructor-arg ref="SqlSession"/>
+   </bean>
+   
+</beans>
