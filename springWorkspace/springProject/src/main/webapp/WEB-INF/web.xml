@@ -28,6 +28,7 @@
 		<!-- <param-value>/WEB-INF/spring/root-context.xml</param-value> -->
 		<param-value>
 			classpath:root-context.xml
+			/WEB-INF/spring/spring-security.xml
 		</param-value>
 		
 	</context-param>
