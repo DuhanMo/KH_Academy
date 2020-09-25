@@ -206,7 +206,7 @@ public class MemberController {
 
 		// 로그인 처리 
 		Member loginUser = mService.loginMember(m);
-		if (loginUser != null) {
+		if (loginUser != null && bcryptPasswordEncoder.matches(m.getPwd(), loginUser.getPwd())) {
 			model.addAttribute("loginUser", loginUser);
 			return "redirect:home.do";
 		} else {
