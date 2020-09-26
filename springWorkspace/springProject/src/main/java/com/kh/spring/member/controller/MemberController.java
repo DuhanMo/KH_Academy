@@ -1,7 +1,5 @@
 package com.kh.spring.member.controller;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -179,19 +177,19 @@ public class MemberController {
 	 * 	  Model에 Attribute가 추가될 때 자동으로 키 값을 찾아 세션에 등록하는 기능을 제공 하는어노테이션 
 	 * 
 	 * */
-//	@RequestMapping(value = "login.do", method = RequestMethod.POST)
-//	public String memberLogin(Member m, Model model) {
-//
-//		// 로그인 처리 
-//		Member loginUser = mService.loginMember(m);
-//		if (loginUser != null) {
-//			model.addAttribute("loginUser", loginUser);
-//			return "redirect:home.do";
-//		} else {
-//			model.addAttribute("msg", "로그인실패!");
-//			return "common/errorPage";
-//		}
-//	}
+	//	@RequestMapping(value = "login.do", method = RequestMethod.POST)
+	//	public String memberLogin(Member m, Model model) {
+	//
+	//		// 로그인 처리 
+	//		Member loginUser = mService.loginMember(m);
+	//		if (loginUser != null) {
+	//			model.addAttribute("loginUser", loginUser);
+	//			return "redirect:home.do";
+	//		} else {
+	//			model.addAttribute("msg", "로그인실패!");
+	//			return "common/errorPage";
+	//		}
+	//	}
 
 	//로그아웃 컨트롤러 2
 	@RequestMapping("logout.do")
@@ -200,7 +198,7 @@ public class MemberController {
 		return "redirect:home.do";
 
 	}
-	
+
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
 	public String memberLogin(Member m, Model model) {
 
@@ -214,8 +212,7 @@ public class MemberController {
 			return "common/errorPage";
 		}
 	}
-	
-	
+
 	//-------------회원가입---------------
 	@RequestMapping("enrollView.do")
 	public String enrollView() {
@@ -223,29 +220,61 @@ public class MemberController {
 	}
 
 	@RequestMapping("minsert.do")
-	public String insertMember(Member m, Model model, 
-			@RequestParam("post") String post, 
-			@RequestParam("address1") String address1, 
-			@RequestParam("address2") String address2) {
+	public String insertMember(Member m, Model model, @RequestParam("post") String post,
+			@RequestParam("address1") String address1, @RequestParam("address2") String address2) {
 		System.out.println(m);
 		System.out.println(post + "," + address1 + "," + address2);
-		if(!post.equals("")) {
-			m.setAddress(post+"," + address1 +"," + address2);
+		if (!post.equals("")) {
+			m.setAddress(post + "," + address1 + "," + address2);
 		}
-		
+
 		System.out.println(bcryptPasswordEncoder.encode(m.getPwd()));
-		
+
 		String encPwd = bcryptPasswordEncoder.encode(m.getPwd());
 		m.setPwd(encPwd);
 		int result = mService.insertMember(m);
-		
-		if(result >0) {
+
+		if (result > 0) {
 			return "redirect:home.do";
-		}else {
-			model.addAttribute("msg","회원가입에 실패하였습니다!");
+		} else {
+			model.addAttribute("msg", "회원가입에 실패하였습니다!");
 			return "common/errorPage";
 		}
-		
+
 	}
 
+	// 뷰페이지로 이동하는 컨트롤러
+	@RequestMapping("myInfo.do")
+	public String myInfoView() {
+		return "member/myPage";
+	}
+
+	// 회원 정보 수정
+	@RequestMapping("mupdate.do")
+	public String memberUpdate(Member m, Model model, @RequestParam("post") String post,
+			@RequestParam("address1") String addr1, @RequestParam("address2") String addr2) {
+		if(!post.equals("")) {
+			m.setAddress(post + ","+ addr1 +","+addr2);
+		}
+		int result = mService.updateMember(m);
+		if(result >0) {
+			model.addAttribute("loginUser",m);
+			return "redirect:home.do";
+		}else {
+			model.addAttribute("msg","회원 정보 수정 실패!");
+			return "common/errorPage";
+		}
+	}
+	@RequestMapping("mdelete.do")
+	public String memberDelete(Member m, Model model,@RequestParam("id") String id,SessionStatus status) {
+		
+		int result = mService.deleteMember(id);
+		if(result >0) {
+			status.setComplete();
+			return "redirect:home.do"; 
+		}else {
+			model.addAttribute("msg","회원 탈퇴 실패!");
+			return "common/errorPage";
+		}		
+	}
 }

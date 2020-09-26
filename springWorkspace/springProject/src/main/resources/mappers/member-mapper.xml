@@ -35,4 +35,15 @@
 		INSERT INTO MEMBER
 		VALUES(#{id},#{pwd},#{name},#{email},#{gender},#{age},#{phone},#{address},sysdate,sysdate,default)
 	</insert>
+
+	<update id="updateMember" parameterType="Member">
+       UPDATE MEMBER
+       SET EMAIL=#{email},PHONE=#{phone},ADDRESS=#{address},UPDATE_DATE=SYSDATE
+       WHERE ID=#{id}
+    </update>
+    <delete id="deleteMember" parameterType="string">
+    	DELETE
+    	FROM MEMBER
+    	WHERE ID=#{id}
+    </delete>
 </mapper>
