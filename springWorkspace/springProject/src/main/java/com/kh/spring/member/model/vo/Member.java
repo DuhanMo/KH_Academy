@@ -15,10 +15,10 @@ public class Member {
 	private Date updateDate;
 	private String mStatus;
 	
-	public Member() {
-	}
+	public Member() {}
 
-	public Member(String id, String pwd, String name, String email, String gender, int age, String phone, String address, Date enrollDate, Date updateDate, String mStatus) {
+	public Member(String id, String pwd, String name, String email, String gender, int age, String phone,
+			String address, Date enrollDate, Date updateDate, String mStatus) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
@@ -123,7 +123,8 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pwd=" + pwd + ", name=" + name + ", email=" + email + ", gender=" + gender + ", age=" + age + ", phone=" + phone + ", address=" + address + ", enrollDate=" + enrollDate + ", updateDate=" + updateDate + ", mStatus=" + mStatus + "]";
+		return "Member [id=" + id + ", pwd=" + pwd + ", name=" + name + ", email=" + email + ", gender=" + gender
+				+ ", age=" + age + ", phone=" + phone + ", address=" + address + ", enrollDate=" + enrollDate
+				+ ", updateDate=" + updateDate + ", mStatus=" + mStatus + "]";
 	}
-	
 }

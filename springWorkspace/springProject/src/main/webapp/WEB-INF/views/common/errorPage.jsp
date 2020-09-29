@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1 style="color: red;">ERRORERRORERRORERRORERRORERROR</h1>
-   <jsp:include page="menubar.jsp"/>
-   <h1 align="center">${ msg }</h1>
+	<jsp:include page="menubar.jsp"/>
+	<h1 align="center">${ msg }</h1>
 </body>
 </html>

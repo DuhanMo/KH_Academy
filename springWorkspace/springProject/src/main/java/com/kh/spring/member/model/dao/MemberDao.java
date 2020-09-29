@@ -12,24 +12,20 @@ public class MemberDao {
 	@Autowired
 	SqlSessionTemplate sqlSession; // root-context에서 작성한 bean으로 생성되어 주입된다.
 	
-	
 	public Member loginMember(Member m) {
-		return (Member) sqlSession.selectOne("memberMapper.loginMember",m);
+		return (Member)sqlSession.selectOne("memberMapper.loginMember",m);
 	}
-
 
 	public int insertMember(Member m) {
 		return sqlSession.insert("memberMapper.insertMember",m);
 	}
 
-
 	public int updateMember(Member m) {
-		return sqlSession.update("memberMapper.updateMember",m);
+		return sqlSession.update("memberMapper.updateMember", m);
 	}
 
-
 	public int deleteMember(String id) {
-		return sqlSession.delete("memberMapper.deleteMember",id);
+		return sqlSession.update("memberMapper.deleteMember",id);
 	}
 
 }

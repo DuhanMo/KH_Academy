@@ -3,31 +3,46 @@ package com.kh.spring.member.model.service;
 import com.kh.spring.member.model.vo.Member;
 
 public interface MemberService {
+	
 	/**
-	 * 1. 회원 로그인 서비스를 위한 메소드 
+	 * 1. 회원 로그인 서비스를 위한 메소드
 	 * @param m
 	 * @return Member
 	 */
 	Member loginMember(Member m);
-
+	
 	/**
-	 * 2. 회원 가입 서비스를 위한 메소
-	 * @param m
-	 * @return 성공시 1이상/ 실패시-1
+	 * 2. 회원 가입 서비스를 위한 메소드
+	 * @param m 
+	 * @return 성공시 1이상/ 실패시 -1
 	 */
 	int insertMember(Member m);
-
+	
 	/**
-	 * 3. 회원 정보 수정 서비스를 위한 메소
+	 * 3. 회원 정보 수정 서비스를 위한 메소드
 	 * @param m
 	 * @return
 	 */
 	int updateMember(Member m);
-
+	
 	/**
-	 * 4. 회원 탈퇴 서비스를 위한 메소
-	 * @param id(로그인한 사용자)
+	 * 4. 회원 탈퇴 서비스를 위한 메소드
+	 * @param id (로그인한 사용자)
 	 * @return
 	 */
 	int deleteMember(String id);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
