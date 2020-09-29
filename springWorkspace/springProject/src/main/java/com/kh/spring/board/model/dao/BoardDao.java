@@ -34,4 +34,8 @@ public class BoardDao {
 		return sqlSession.selectOne("boardMapper.selectBoard",bId);
 	}
 
+	public int insertBoard(Board b) {
+		return sqlSession.insert("boardMapper.insertBoard",b);
+	}
+
 }

@@ -14,7 +14,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Autowired
 	private BoardDao bDao;
-	
+
 	@Override
 	public int getListCount() {
 		return bDao.getListCount();
@@ -29,13 +29,18 @@ public class BoardServiceImpl implements BoardService {
 	public Board selectBoard(int bId) {
 		int result = bDao.updateCount(bId);
 		System.out.println(result);
-		
-		if(result>0) {
+
+		if (result > 0) {
 			return bDao.selectBoard(bId);
-		}else{
+		} else {
 			return null;
-			
+
 		}
+	}
+
+	@Override
+	public int insertBoard(Board b) {
+		return bDao.insertBoard(b);
 	}
 
 }

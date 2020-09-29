@@ -23,4 +23,6 @@ public interface BoardService {
 	ArrayList<Board> selectList(PageInfo pi);
 
 	Board selectBoard(int bId);
+
+	int insertBoard(Board b);
 }

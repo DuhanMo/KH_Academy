@@ -38,4 +38,12 @@
 		WHERE BID=#{bId}
 		AND B_STATUS='Y'
 	</select>
+	<insert id="insertBoard" parameterType="Board">
+		INSERT INTO BOARD
+		VALUES(
+			SEQ_BID.NEXTVAL,#{bTitle},#{bWriter},#{bContent},
+			#{originalFileName},#{renameFileName},DEFAULT,SYSDATE,SYSDATE,DEFAULT)
+		
+		
+	</insert>
 </mapper>

@@ -33,7 +33,7 @@
          <td>첨부파일</td>
          <td>
             <c:if test="${ !empty b.originalFileName }">
-               <a href="${ contextPath }/resources/buploadFiles/${b.reanmeFileName }" download="${ b.originalFileName }">
+               <a href="${ contextPath }/resources/buploadFiles/${b.renameFileName }" download="${ b.originalFileName }">
                   ${ b.originalFileName }
                </a>
             </c:if>
