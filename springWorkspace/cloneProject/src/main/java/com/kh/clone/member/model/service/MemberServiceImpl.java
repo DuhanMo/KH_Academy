@@ -22,4 +22,14 @@ public class MemberServiceImpl implements MemberService {
 		return mDao.insertMember(m);
 	}
 
+	@Override
+	public int updateMember(Member m) {
+		return mDao.updateMember(m);
+	}
+
+	@Override
+	public int deleteMember(String id) {
+		return mDao.deleteMember(id);
+	}
+
 }

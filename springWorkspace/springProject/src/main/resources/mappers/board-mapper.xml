@@ -46,4 +46,15 @@
 		
 		
 	</insert>
+	<update id="updateBoard" parameterType="Board">
+		UPDATE BOARD
+		SET
+			BTITLE=#{bTitle},
+			BCONTENT=#{bContent},
+			ORIGINAL_FILENAME=#{originalFileName},
+			RENAME_FILENAME=#{renameFileName},
+			B_MODIFY_DATE=SYSDATE
+		WHERE
+			BID=#{bId}
+	</update>
 </mapper>

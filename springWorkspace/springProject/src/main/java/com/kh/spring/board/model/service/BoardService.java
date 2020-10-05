@@ -22,7 +22,26 @@ public interface BoardService {
 	 */
 	ArrayList<Board> selectList(PageInfo pi);
 
+	/**
+	 * 2. 게시판 상세조회 
+	 * @param bId
+	 * @return
+	 */
 	Board selectBoard(int bId);
 
+	/**
+	 * 3. 게시판 작성 
+	 * @param b
+	 * @return
+	 */
 	int insertBoard(Board b);
+
+	/**
+	 * 4. 게시판 수정 
+	 * @param bId
+	 * @return
+	 */
+	Board selectUpdateBoard(int bId);
+	int updateBoard(Board b);
+	
 }

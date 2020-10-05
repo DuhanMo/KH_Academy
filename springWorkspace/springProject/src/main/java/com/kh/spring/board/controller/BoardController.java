@@ -96,8 +96,8 @@ public class BoardController {
 		// root 하위의 buploadFiles 폴더를 연결
 		// \를 문자로 인식하기 위해서는 \\를 사용한다.
 		// C:\springWordspace\springProject\src\main\webapp\resources\buploadFiles
-//		String savePath = root + "\\buploadFiles";
-		String savePath = root + File.separator+"buploadFiles";
+		//		String savePath = root + "\\buploadFiles";
+		String savePath = root + File.separator + "buploadFiles";
 
 		File folder = new File(savePath); // savePath의 폴더를 불러온다.
 
@@ -123,5 +123,43 @@ public class BoardController {
 			System.out.println("파일 전송 에러 : " + e.getMessage());
 		}
 		return renameFileName;
+	}
+
+	@RequestMapping("bupView.do")
+	public ModelAndView boardDetail(ModelAndView mv, int bId) {
+		mv.addObject("b", bService.selectUpdateBoard(bId)).setViewName("board/boardUpdateForm");
+		return mv;
+	}
+
+	@RequestMapping("bupdate.do")
+	public ModelAndView boardUpdate(ModelAndView mv, Board b, HttpServletRequest request,
+			@RequestParam(value = "reloadFile", required = false) MultipartFile file) {
+		if (file != null && !file.isEmpty()) { // 새로 업로드한 파일이 있다면 
+			if (b.getRenameFileName() != null) {
+				deleteFile(b.getRenameFileName(), request);
+			}
+			String renameFileName = saveFile(file, request);
+			if (renameFileName != null) {
+				b.setOriginalFileName(file.getOriginalFilename());
+				b.setRenameFileName(renameFileName);
+			}
+		}
+		int result = bService.updateBoard(b);
+		
+		if (result >0) {
+			mv.addObject("bId", b.getbId()).setViewName("redirect:bdetail.do");
+		} else {
+			mv.addObject("msg","수정실패!").setViewName("common/errorPage");
+		}
+		return mv;
+	}
+
+	public void deleteFile(String fileName, HttpServletRequest request) {
+		String root = request.getSession().getServletContext().getRealPath("resources");
+		String savePath = root + File.pathSeparator + "buploadFiles";
+		File f = new File(savePath + File.pathSeparator + fileName);
+		if (f.exists()) {
+			f.delete();
+		}
 	}
 }

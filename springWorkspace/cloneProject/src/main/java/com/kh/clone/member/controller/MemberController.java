@@ -1,9 +1,14 @@
 package com.kh.clone.member.controller;
 
+import java.lang.Thread.State;
+
+import javax.net.ssl.SSLEngineResult.Status;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -94,6 +99,55 @@ public class MemberController {
 			model.addAttribute("msg","회원 가입에 실패하였습니다.!");
 			return "common/errorPage";
 		}
+	}
+	/**
+	 * 뷰페이지로 이동 
+	 * @return
+	 */
+	@RequestMapping("myInfo.do")
+	public String myInfoView() {
+		return "member/myPage";
+	}
+	/**
+	 * 유저 정보수정 기능
+	 * @param m
+	 * @param model
+	 * @param post
+	 * @param address1
+	 * @param address2
+	 * @return
+	 */
+	@RequestMapping("mupdate.do")
+	public String memberUpdate(Member m,
+			Model model,
+			@RequestParam("post") String post,
+			@RequestParam("address1") String address1,
+			@RequestParam("address2") String address2
+			) {
+		if(!post.equals("")) {
+			m.setAddress(post +"," + address1 + "," +address2);
+		}
+		int result = mService.updateMember(m);
+		if(result > 0) {
+			model.addAttribute("loginUser", m);
+			return "redirect:home.do";
+		}else {
+			model.addAttribute("msg", "회원 정보 수정 실패!");
+			return "common/errorPage";
+		}
+	}
+	@RequestMapping("mdelete.do")
+	public String memberDelete(String id, Model model) {
+		
+		int result = mService.deleteMember(id);
+		
+		if(result>0) {
+			return "redirect:logout.do";
+		}else {
+			model.addAttribute("msg","회원탈퇴실패!");
+			return "common/errorPage";
+		}
 		
 	}
+	
 }
