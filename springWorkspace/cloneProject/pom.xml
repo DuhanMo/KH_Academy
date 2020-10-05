@@ -11,8 +11,8 @@
 	<!-- * 프로젝트 정보 -->
 	<modelVersion>4.0.0</modelVersion><!-- Maven 2버전부터 쭉 4.0.0 -->
 	<groupId>com.kh</groupId>         <!-- 최초 만든 패지키 1,2레벨 -->
-	<artifactId>spring</artifactId>   <!-- 최초 만든 패지지 3레벨 == context-path -->
-	<name>springProject</name>		   <!-- 프로젝트 명 -->
+	<artifactId>clone</artifactId>   <!-- 최초 만든 패지지 3레벨 == context-path -->
+	<name>cloneProject</name>		   <!-- 프로젝트 명 -->
 	<packaging>war</packaging>        <!-- 패키지 유형을 정의하는 영역 -->
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
