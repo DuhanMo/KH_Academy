@@ -162,4 +162,18 @@ public class BoardController {
 			f.delete();
 		}
 	}
+	@RequestMapping("bdelete.do")
+	 public String boardDelete(int bId, HttpServletRequest request) {
+		Board b = bService.selectUpdateBoard(bId);
+		if (b.getRenameFileName() != null) {
+			deleteFile(b.getRenameFileName(),request);
+		}
+		int result = bService.deleteBoard(bId);
+		if (result >0) {
+			return "redirect:blist.do";
+		} else {
+			return "common/errorPage";
+		}
+	}
+	 
 }

@@ -57,4 +57,11 @@
 		WHERE
 			BID=#{bId}
 	</update>
+	<update id="deleteBoard" parameterType="_int">
+      UPDATE BOARD
+      SET
+         B_STATUS='N'
+      WHERE
+         BID=#{bId}
+   </update>
 </mapper>

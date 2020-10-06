@@ -42,6 +42,14 @@ public interface BoardService {
 	 * @return
 	 */
 	Board selectUpdateBoard(int bId);
+
 	int updateBoard(Board b);
+
+	/**
+	 * 5. 게시판 삭제 
+	 * @param bId
+	 * @return
+	 */
+	int deleteBoard(int bId);
 	
 }
