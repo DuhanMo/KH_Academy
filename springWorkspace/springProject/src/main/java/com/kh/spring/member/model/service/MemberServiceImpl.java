@@ -37,4 +37,9 @@ public class MemberServiceImpl implements MemberService {
 		return mDao.deleteMember(id);
 	}
 
+	@Override
+	public int idCheck(String id) {
+		return mDao.idCheck(id);
+	}
+
 }

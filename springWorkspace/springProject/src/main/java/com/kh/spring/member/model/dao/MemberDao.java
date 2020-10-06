@@ -28,4 +28,8 @@ public class MemberDao {
 		return sqlSession.update("memberMapper.deleteMember",id);
 	}
 
+	public int idCheck(String id) {
+		return sqlSession.selectOne("memberMapper.idCheck",id);
+	}
+
 }

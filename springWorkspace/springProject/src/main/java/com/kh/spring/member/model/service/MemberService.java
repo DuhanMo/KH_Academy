@@ -31,6 +31,13 @@ public interface MemberService {
 	 * @return
 	 */
 	int deleteMember(String id);
+
+	/**
+	 * 5. 아이디 중복체크 
+	 * @param id
+	 * @return
+	 */
+	int idCheck(String id);
 }
 
 

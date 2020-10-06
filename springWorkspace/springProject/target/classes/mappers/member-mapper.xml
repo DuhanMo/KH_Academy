@@ -47,7 +47,11 @@
  		SET M_STATUS ='N'
  		WHERE ID=#{id}
  	</update>
- 	
+ 	<select id="idCheck" parameterType="string" resultType="_int">
+ 		SELECT COUNT(*)
+ 		FROM MEMBER
+ 		WHERE ID=#{id}
+ 	</select>
 </mapper>
 
 

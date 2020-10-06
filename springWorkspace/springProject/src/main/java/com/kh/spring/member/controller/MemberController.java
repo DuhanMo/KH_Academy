@@ -1,5 +1,10 @@
 package com.kh.spring.member.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -8,6 +13,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
@@ -297,6 +303,37 @@ public class MemberController {
 		}else {
 			model.addAttribute("msg", "회원 탈퇴 실패");
 			return "common/errorPage";
+		}
+	}
+	
+//	@RequestMapping("idCheck.do")
+//	public void idCheck(String id, HttpServletResponse response) throws IOException {
+//		int result = mService.idCheck(id);
+//		
+//		PrintWriter out = response.getWriter();
+//		if (result > 0) {
+//			out.print("fail");
+//		}else {
+//			out.print("ok");
+//		}
+//		System.out.println(result);
+//	}
+	
+	/**
+	 * @ResponseBody를 이용해서 
+	 * @param id
+	 * @param response
+	 * @throws IOException
+	 */
+	@ResponseBody
+	@RequestMapping("idCheck.do")
+	public String idCheck(String id) {
+		int result = mService.idCheck(id);
+		
+		if (result > 0) {
+			return "fail";
+		}else {
+			return "ok";
 		}
 	}
 }
