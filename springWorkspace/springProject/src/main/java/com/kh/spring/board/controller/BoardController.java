@@ -1,21 +1,30 @@
 package com.kh.spring.board.controller;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonIOException;
 import com.kh.spring.board.model.service.BoardService;
 import com.kh.spring.board.model.vo.Board;
 import com.kh.spring.board.model.vo.PageInfo;
+import com.kh.spring.board.model.vo.Reply;
 import com.kh.spring.common.Pagination;
 
 @Controller
@@ -145,11 +154,11 @@ public class BoardController {
 			}
 		}
 		int result = bService.updateBoard(b);
-		
-		if (result >0) {
+
+		if (result > 0) {
 			mv.addObject("bId", b.getbId()).setViewName("redirect:bdetail.do");
 		} else {
-			mv.addObject("msg","수정실패!").setViewName("common/errorPage");
+			mv.addObject("msg", "수정실패!").setViewName("common/errorPage");
 		}
 		return mv;
 	}
@@ -162,18 +171,118 @@ public class BoardController {
 			f.delete();
 		}
 	}
+
 	@RequestMapping("bdelete.do")
-	 public String boardDelete(int bId, HttpServletRequest request) {
+	public String boardDelete(int bId, HttpServletRequest request) {
 		Board b = bService.selectUpdateBoard(bId);
 		if (b.getRenameFileName() != null) {
-			deleteFile(b.getRenameFileName(),request);
+			deleteFile(b.getRenameFileName(), request);
 		}
 		int result = bService.deleteBoard(bId);
-		if (result >0) {
+		if (result > 0) {
 			return "redirect:blist.do";
 		} else {
 			return "common/errorPage";
 		}
 	}
-	 
+
+	/**
+	 * 1. stream을 이용해서 json배열 보내기 
+	 * @param response
+	 * @throws IOException 
+	 */
+//	@RequestMapping("topList.do")
+//	public void boardTopList(HttpServletResponse response) throws IOException {
+//		response.setContentType("application/json; charset=utf-8");
+//		
+//		ArrayList<Board> list = bService.selectTopList();
+//		
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//		JSONArray jArr = new JSONArray();
+//		for (Board b : list) {
+//			JSONObject jObj = new JSONObject();
+//			jObj.put("bId",b.getbId());
+//			jObj.put("bTitle",b.getbTitle());
+//			jObj.put("bWiter",b.getbWriter());
+//			jObj.put("originalFileName",b.getOriginalFileName());
+//			jObj.put("bCount",b.getbCount());
+//			jObj.put("bCreateDate",sdf.format(b.getbCreateDate()));
+//			
+//			jArr.add(jObj);
+//		}
+//		PrintWriter out = response.getWriter();
+//		out.print(jArr);
+//	}
+	/**
+	 * 2. Gson(Google + json)을 이용해서 
+	 * @param response
+	 * @throws IOException 
+	 * @throws JsonIOException 
+	 */
+//	@RequestMapping("topList.do")
+//	public void boardTopList(HttpServletResponse response) throws JsonIOException, IOException {
+//		response.setContentType("application/json; charset=utf-8");
+//		
+//		ArrayList<Board> list = bService.selectTopList();
+//		
+//		// Gson도 날짜에 대해서는 날짜포맷을 변경시켜줘야한다.
+//		// Gson객체의 속성값을 변경하고자 하면 GsonBuilder()를 통해서 변경을 한다.
+//		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+//		gson.toJson(list,response.getWriter());
+//	}
+//	
+	/*
+	 * 3. jackson objectMapper를 이용하는 방식
+	 *    jackson은 java Json라이브러리이고, jackson라이브러리는 objectMapper, JsonGenerator에 의존한다.
+	 * 
+	 * 	  * jackson 방법
+	 * 	1. @ResponseBody 붙이고 반환값을 String으로 두고 objectMapper를 이용해서 list를 string올 반환하는 방법
+	 *  2. 반환값을 list로 두고 list 자체를 반환하는 방법
+	 *  	--> xml에 MessageConverter관련 bean을 등록해서 사용해야한다. (자바 객체를 자바스크립트객체로 바꿔주는 작업을 도와준다.)
+	 * */
+	/**
+	 * 3. jackson을 이용한 방법 
+	 * @return
+	 * @throws JsonProcessingException 
+	 */
+	@ResponseBody
+	@RequestMapping(value = "topList.do",produces = "application/json; charset=utf-8")
+	public String boardTopList() throws JsonProcessingException {
+		ArrayList<Board> list = bService.selectTopList();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		mapper.setDateFormat(sdf);
+		
+		String jsonStr = mapper.writeValueAsString(list);
+		return jsonStr;
+		
+	}
+	/**
+	 * 게시글 댓글 목록 조회 
+	 * @param response
+	 * @param bId
+	 * @throws IOException 
+	 * @throws JsonIOException 
+	 */
+	@RequestMapping("rList.do")
+	public void getReplyList(HttpServletResponse response, int bId) throws JsonIOException, IOException {
+		ArrayList<Reply> rList = bService.selectReplyList(bId);
+		
+		response.setContentType("application/json; charset=utf-8"); 
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+		gson.toJson(rList,response.getWriter());
+	}
+	@ResponseBody
+	@RequestMapping("addReply.do")
+	public String addReply(Reply r) {
+		int result = bService.insertReply(r);
+		
+		if (result >0) {
+			return "success";
+		} else {
+			return"fail";
+		}
+	}
 }

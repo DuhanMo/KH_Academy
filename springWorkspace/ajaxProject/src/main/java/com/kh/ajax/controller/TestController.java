@@ -53,50 +53,20 @@ public class TestController {
 		}
 	}
 	/**
-	 * 3. @ResponseBody를 사용
+	 * 3. @ResponseBody를 사용 + produces = "application/json;charset=utf-8" 사용
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
-//	@ResponseBody
-//	@RequestMapping("test2.do")
-//	public String test2Method() throws UnsupportedEncodingException {
-//		// DB에서 조회해온 결과를 가져왓다고 가정하고 User 객체를 하나 생성
-//		User user = new User("user01","pass01","홍길동",20,"user01@test.com","01012345678");
-//		
-//		
-//		// @ResponseBody 어노테이션을 추가하게 되면 이하의 코드를 생략해도된다.
-//		// 다만 charset은 별도로 수정해주어야한다.
-//		//response.setContentType("application/json; charset=UTF-8");
-//		
-//		// JSON 객체에 담아서 보내주기 
-//		JSONObject job = new JSONObject(); //JSON 사용을 위해 pom.xml 에 넣은 json.simple library를 추가했기 때문 .
-//		// 전달해주는 시점에 string 형식 utf-8
-//		job.put("userId",user.getUserId());
-//		job.put("userPwd",user.getUserPwd());
-//		job.put("userName",URLEncoder.encode(user.getUserName(),"UTF-8"));
-//		job.put("age",user.getAge());
-//		job.put("email",user.getEmail());
-//		job.put("phone",user.getPhone());
-//		
-////		return job;//반환형이 String 이 아니어서 에러 
-//		return job.toJSONString();
-//	}
-	/**
-	 * 4. @ResponseBody를 쓰지않고 json 객체 보내기 
-	 * @return
-	 * @throws IOException 
-	 * @throws UnsupportedEncodingException
-	 */
-	
-	@RequestMapping("test2.do")
-	public void test2Method(HttpServletResponse response) throws IOException  {
+	@ResponseBody
+	@RequestMapping(value = "test2.do", produces = "application/json;charset=utf-8")
+	public String test2Method() throws UnsupportedEncodingException {
 		// DB에서 조회해온 결과를 가져왓다고 가정하고 User 객체를 하나 생성
 		User user = new User("user01","pass01","홍길동",20,"user01@test.com","01012345678");
 		
 		
 		// @ResponseBody 어노테이션을 추가하게 되면 이하의 코드를 생략해도된다.
 		// 다만 charset은 별도로 수정해주어야한다.
-		response.setContentType("application/json; charset=UTF-8");
+		//response.setContentType("application/json; charset=UTF-8");
 		
 		// JSON 객체에 담아서 보내주기 
 		JSONObject job = new JSONObject(); //JSON 사용을 위해 pom.xml 에 넣은 json.simple library를 추가했기 때문 .
@@ -108,9 +78,40 @@ public class TestController {
 		job.put("email",user.getEmail());
 		job.put("phone",user.getPhone());
 		
-		PrintWriter out = response.getWriter();
-		out.print(job);
+//		return job;//반환형이 String 이 아니어서 에러 
+		return job.toJSONString();
 	}
+	/**
+	 * 4. @ResponseBody를 쓰지않고 json 객체 보내기 
+	 * @return
+	 * @throws IOException 
+	 * @throws UnsupportedEncodingException
+	 */
+	
+//	@RequestMapping("test2.do")
+//	public void test2Method(HttpServletResponse response) throws IOException  {
+//		// DB에서 조회해온 결과를 가져왓다고 가정하고 User 객체를 하나 생성
+//		User user = new User("user01","pass01","홍길동",20,"user01@test.com","01012345678");
+//		
+//		
+//		// @ResponseBody 어노테이션을 추가하게 되면 이하의 코드를 생략해도된다.
+//		// 다만 charset은 별도로 수정해주어야한다.
+//		response.setContentType("application/json; charset=UTF-8");
+//		
+//		// JSON 객체에 담아서 보내주기 
+//		JSONObject job = new JSONObject(); //JSON 사용을 위해 pom.xml 에 넣은 json.simple library를 추가했기 때문 .
+//		// 전달해주는 시점에 string 형식 utf-8
+//		job.put("userId",user.getUserId());
+//		job.put("userPwd",user.getUserPwd());
+//		job.put("userName",user.getUserName());
+//		job.put("age",user.getAge());
+//		job.put("email",user.getEmail());
+//		job.put("phone",user.getPhone());
+//		
+//		PrintWriter out = response.getWriter();
+//		out.print(job);
+//	}
+
 }
 
 

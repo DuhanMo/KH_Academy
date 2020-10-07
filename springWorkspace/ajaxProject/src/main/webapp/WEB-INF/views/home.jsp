@@ -74,7 +74,7 @@
 									console.log(decodeURIComponent(data.userName));
 									
 									$("#d2").html("ID : " +data.userId
-											+"<br> name : " + decodeURIComponent(data.userName)
+											+"<br> name : " +data.userName
 											+"<br> email : " + data.email
 											+ "<br> phone : " + data.phone
 											+ "<br> 나이 : " +data.age );
