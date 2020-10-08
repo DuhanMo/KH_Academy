@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -30,6 +32,9 @@ public class MemberController {
 	// 암호화 처리 
 	@Autowired
 	private BCryptPasswordEncoder bcryptPasswordEncoder;
+	// logging
+	private Logger logger = LoggerFactory.getLogger(MemberController.class);
+	
 	
 	
 	// [ 파라미터를 전송 받는 방법]
@@ -214,6 +219,10 @@ public class MemberController {
 	
 	@RequestMapping(value="login.do",method=RequestMethod.POST) 
 	public String memberLogin(Member m,Model model) {          
+//		logger.debug("memberLogin 호출됨"+m);
+		if (logger.isDebugEnabled()) { // logger속성에 level value="debug"일때 실행한다.
+			logger.debug("memberLogin 호출됨"+m);
+		}
 		
 		// 로그인  처리
 		Member loginUser = mService.loginMember(m);
