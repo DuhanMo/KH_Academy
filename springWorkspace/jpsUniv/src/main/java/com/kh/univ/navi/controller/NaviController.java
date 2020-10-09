@@ -9,4 +9,5 @@ public class NaviController {
 	public String enrollClassPage() {
 		return "enrollClassPage";
 	}
+	
 }
