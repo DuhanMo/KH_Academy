@@ -6,15 +6,17 @@
 	</settings>
 	
 	<!-- typeAliases -->
-	<!-- <typeAliases>
-		<typeAlias type="com.kh.spring.member.model.vo.Member" alias="Member"/>
-		<typeAlias type="com.kh.spring.board.model.vo.Board" alias="Board"/>
-		<typeAlias type="com.kh.spring.board.model.vo.Reply" alias="Reply"/>
+	 <typeAliases>
+		<typeAlias type="com.kh.univ.member.model.vo.Member" alias="Member"/>
+		<typeAlias type="com.kh.univ.test.model.vo.Test" alias="Test"/>
+		<!-- <typeAlias type="com.kh.spring.board.model.vo.Board" alias="Board"/>
+		<typeAlias type="com.kh.spring.board.model.vo.Reply" alias="Reply"/> -->
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mappers/member-mapper.xml"/>
-		<mapper resource="mappers/board-mapper.xml"/>
-	</mappers> -->
+		<mapper resource="mappers/test-mapper.xml"/>
+		<!-- <mapper resource="mappers/board-mapper.xml"/> -->
+	</mappers> 
 	
 </configuration>

@@ -219,17 +219,17 @@ public class BoardController {
 	 * @throws IOException 
 	 * @throws JsonIOException 
 	 */
-//	@RequestMapping("topList.do")
-//	public void boardTopList(HttpServletResponse response) throws JsonIOException, IOException {
-//		response.setContentType("application/json; charset=utf-8");
-//		
-//		ArrayList<Board> list = bService.selectTopList();
-//		
-//		// Gson도 날짜에 대해서는 날짜포맷을 변경시켜줘야한다.
-//		// Gson객체의 속성값을 변경하고자 하면 GsonBuilder()를 통해서 변경을 한다.
-//		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
-//		gson.toJson(list,response.getWriter());
-//	}
+	@RequestMapping("topList.do")
+	public void boardTopList(HttpServletResponse response) throws JsonIOException, IOException {
+		response.setContentType("application/json; charset=utf-8");
+		
+		ArrayList<Board> list = bService.selectTopList();
+		
+		// Gson도 날짜에 대해서는 날짜포맷을 변경시켜줘야한다.
+		// Gson객체의 속성값을 변경하고자 하면 GsonBuilder()를 통해서 변경을 한다.
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+		gson.toJson(list,response.getWriter());
+	}
 //	
 	/*
 	 * 3. jackson objectMapper를 이용하는 방식
@@ -246,7 +246,7 @@ public class BoardController {
 	 * @throws JsonProcessingException 
 	 */
 	@ResponseBody
-	@RequestMapping(value = "topList.do",produces = "application/json; charset=utf-8")
+	@RequestMapping(value = "topList1.do",produces = "application/json; charset=utf-8")
 	public String boardTopList() throws JsonProcessingException {
 		ArrayList<Board> list = bService.selectTopList();
 		

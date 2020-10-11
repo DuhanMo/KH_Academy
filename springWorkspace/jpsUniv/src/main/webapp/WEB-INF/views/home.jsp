@@ -19,6 +19,7 @@
 
 <body id="page-top">
   <!-- Page Wrapper -->
+  <c:import url="common/menubar.jsp" />
   <div id="wrapper">
 
     <!-- Sidebar -->
@@ -164,7 +165,10 @@
           </ul>
         </nav>
         <!-- End of Topbar -->
-
+		<div>
+		<h1>ajaxTest 페이지로 넘어가기</h1>
+		<a href="ajaxTest.do">페이지로 이동</a>
+		</div>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
