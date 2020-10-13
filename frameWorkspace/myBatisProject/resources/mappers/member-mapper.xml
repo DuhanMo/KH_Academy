@@ -46,7 +46,7 @@
             여러줄로 줄바꿈 문자를 섞어 사용도 가능하다.
             단, 문장의 마침을 나타내는 세미콜론은 !!!!!여기서도 역시 에러를 발생시킴. 생략해야함.
             -->
-    <select id="test" parameterType="com.kh.member.model.vo.Member" resultType="com.kh.member.model.vo.Member">
+    <select id="test" parameterType="com.kh.member.model.vo.Member" resultType="Member">
         SELECT *
         FROM MEMBER
         WHERE USER_ID=#{userId}

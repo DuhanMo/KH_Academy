@@ -13,7 +13,6 @@ public class TestDao {
 	private SqlSessionTemplate sqlSession;
 
 	public ArrayList<Test> selectList() {
-		System.out.println((ArrayList)sqlSession.selectList("testMapper.selectList"));
 		return (ArrayList)sqlSession.selectList("testMapper.selectList");
 	}
 

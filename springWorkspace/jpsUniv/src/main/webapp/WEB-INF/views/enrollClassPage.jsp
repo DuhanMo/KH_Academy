@@ -61,7 +61,7 @@
                                 serverSide: false,
                                 searching: true,
                                 ajax : {
-                                    "url":"/getUserList.do",
+                                    "url":"test2.do",
                                     "type":"POST",
                                     "data": function (d) {
                                         d.userStatCd = "NR";

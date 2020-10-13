@@ -47,6 +47,7 @@
         <!--        방금 쓰던 id,result 가 아닌 collection을 가지고 작업하게 되며 Board클래스의 필드인 replyList(ArrayList)에 매핑시킨다.-->
     </resultMap>
 
+
     <!--    1_1. 게시글 수 조회용 쿼리문 -->
     <select id="selectListCount" resultType="_int">
         SELECT COUNT(*)
@@ -110,6 +111,18 @@
         </if>
         <if test="content != null">
             AND BCONTENT LIKE '%' || #{content} || '%'
+        </if>
+    </select>
+    <select id="findActiveBlogLike" resultType="Blog">
+        SELECT * FROM BLOG WHERE
+        <if test="state != null">
+            state = #{state}
+        </if>
+        <if test="title != null">
+            title like '%'|| #{title} || '%'
+        </if>
+        <if test="author != null and author.name != null">
+            author_name like '%'|| #{author.name} || '%'
         </if>
     </select>
 

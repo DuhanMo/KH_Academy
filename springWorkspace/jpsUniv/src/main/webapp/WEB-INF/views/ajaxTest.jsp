@@ -12,37 +12,26 @@
 <body>
 <button type="button" id="test" value="TEST">테스트 !</button>
 <script type="text/javascript">
-var test = document.getElementById('test');
-test.addEventListener('click', function() {
-	
-	$.ajax({
-		url: "test1.do",
-		sucess : function () {
-			alert("helloworld");
-			console.log("sucess");
-		},
-		error : function() {
-			console.log("fail");
-		}
-	});
+$(function() {
+	selectList();
 });
-function test() {
-	$.ajax({
-		type : "GET",
-		url : "get.do",
-		data : {
-			kor : "${kor}",
-			us : "${us}"
-		},
-		error : function(error) {
-			console.log("error");
-		},
-		success : function(data) {
-			console.log("success");
 
+function selectList() {
+	$.ajax({
+		url: "test2.do",
+		dataType: "json",
+		success : function (data) {
+			console.log(data);
+		},
+		error : function(request, status, error) {
+			alert("code:" + request.status + "\n"
+					+ "message : " + request.responseText
+					+ "\n" + "error : " + error);
 		}
 	});
 }
+
+
 </script>
 </body>
 </html>

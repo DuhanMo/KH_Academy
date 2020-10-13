@@ -32,4 +32,9 @@ public class MemberDao {
 		return sqlSession.selectOne("memberMapper.idCheck",id);
 	}
 
+	// 트랜잭션 테스트용 
+	public int insertBoard() {
+		return sqlSession.insert("memberMapper.insertBoard");
+	}
+
 }

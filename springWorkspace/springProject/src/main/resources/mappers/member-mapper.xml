@@ -52,6 +52,10 @@
  		FROM MEMBER
  		WHERE ID=#{id}
  	</select>
+ 	<insert id="insertBoard">
+ 		INSERT INTO BOARD(BID,BTITLE)
+ 		VALUES(SEQ_BID.NEXTVAL,'새로운회원이가입되었습니다.');
+ 	</insert>
 </mapper>
 
 
