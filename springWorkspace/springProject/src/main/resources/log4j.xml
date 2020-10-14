@@ -151,6 +151,12 @@
 		<level value="debug" />
 		<appender-ref ref="loginFile"/>
 	</logger>
+	<!-- AOP적용  -->
+	<logger name="com.kh.spring.common.aop.BeforeAspect" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="myConsole"/>
+	</logger>
+	
 	<!-- interceptor -->
 	<logger name="com.kh.spring.common.interceptor.LoginInterceptor" additivity="false">
 		<level value="debug" />
