@@ -7,18 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55e343d0-38bf-4612-a718-53296de7ea9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mappers/board-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mappers/board-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mappers/member-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mappers/member-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springWorkspace/Servers/Tomcat v8.5 Server at localhost-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/Servers/Tomcat v8.5 Server at localhost-config/server.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../springWorkspace/ajaxProject/target/m2e-wtp/web-resources/META-INF/maven/com.kh/ajax/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/ajaxProject/target/m2e-wtp/web-resources/META-INF/maven/com.kh/ajax/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../springWorkspace/cloneProject/target/m2e-wtp/web-resources/META-INF/maven/com.kh/clone/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/cloneProject/target/m2e-wtp/web-resources/META-INF/maven/com.kh/clone/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/java/com/kh/univ/test/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/java/com/kh/univ/test/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/java/com/kh/univ/test/model/dao/TestDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/java/com/kh/univ/test/model/dao/TestDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/webapp/WEB-INF/views/ajaxTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/webapp/WEB-INF/views/ajaxTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/webapp/WEB-INF/views/enrollClassPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/src/main/webapp/WEB-INF/views/enrollClassPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/target/m2e-wtp/web-resources/META-INF/maven/com.kh/univ/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/jpsUniv/target/m2e-wtp/web-resources/META-INF/maven/com.kh/univ/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springWorkspace/springProject/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/springProject/src/main/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springWorkspace/springProject/src/main/webapp/WEB-INF/spring/appServlet/aspect-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/springProject/src/main/webapp/WEB-INF/spring/appServlet/aspect-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springWorkspace/springProject/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/springProject/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springWorkspace/springProject/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/springProject/target/classes/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../springWorkspace/springProject/target/m2e-wtp/web-resources/META-INF/maven/com.kh/spring/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springWorkspace/springProject/target/m2e-wtp/web-resources/META-INF/maven/com.kh/spring/pom.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mappers/member-mapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="480">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -92,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/kh/board/model/dao/BoardDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="656">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+              <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -100,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mappers/board-mapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="1665">
               <caret line="111" column="25" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="25" />
             </state>
           </provider>
@@ -110,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/resources/mybatis-config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="16" selection-end-column="18" />
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -118,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="390">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -239,8 +234,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="419" />
-    <option name="y" value="23" />
+    <option name="x" value="-1723" />
+    <option name="y" value="109" />
     <option name="width" value="1021" />
     <option name="height" value="877" />
   </component>
@@ -250,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -434,6 +428,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -585,11 +580,12 @@
       <workItem from="1602485639128" duration="1575000" />
       <workItem from="1602488045801" duration="1100000" />
       <workItem from="1602489961805" duration="1426000" />
+      <workItem from="1602745377060" duration="423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59669000" />
+    <option name="totallyTimeSpent" value="60092000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,9 +597,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="419" y="23" width="1021" height="877" extended-state="0" />
+    <frame x="-1723" y="109" width="1021" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.63190186" visible="true" weight="0.24923392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.63190186" visible="true" weight="0.25434116" />
       <window_info id="Structure" order="1" sideWeight="0.36809817" side_tool="true" weight="0.21459228" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -862,6 +858,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mappers/member-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kh/member/controller/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -876,6 +879,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="26" column="20" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mappers/board-mapper.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="111" column="25" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mybatis-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -906,43 +935,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mappers/board-mapper.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="111" column="25" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mappers/member-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mybatis-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kh/member/model/dao/MemberDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kh/board/model/dao/BoardDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="656">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
         </state>
       </provider>
     </entry>

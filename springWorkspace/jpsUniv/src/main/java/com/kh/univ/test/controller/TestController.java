@@ -2,11 +2,16 @@ package com.kh.univ.test.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -30,6 +35,7 @@ public class TestController {
 		ArrayList<Test> list = tService.selectList();
 		System.out.println(list);
 		Gson gson = new GsonBuilder().create();
+		gson.toJson(list,response.getWriter());
 	}
 	@ResponseBody
 	@RequestMapping(value = "test2.do", produces = "application/json; charset=utf-8")
@@ -37,9 +43,20 @@ public class TestController {
 		ArrayList<Test> list = tService.selectList();
 		System.out.println(list);
 		ObjectMapper mapper = new ObjectMapper();
-		
+
 		String jsonStr = mapper.writeValueAsString(list);
 		System.out.println(jsonStr);
 		return jsonStr;
+	}
+	@ResponseBody
+	@RequestMapping("test3.do")
+	public Object selectList3(HttpServletRequest request, HttpServletResponse response,
+							  @ModelAttribute("testVO") Test testVO){
+		Map<String, Object> mp = new HashMap<String, Object>();
+		mp.put("data", tService.selectList());
+
+		Object result = mp;
+		System.out.println(result);
+		return result;
 	}
 }

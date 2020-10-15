@@ -156,7 +156,14 @@
 		<level value="debug" />
 		<appender-ref ref="myConsole"/>
 	</logger>
-	
+	<logger name="com.kh.spring.common.aop.AroundAspect" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="myConsole"/>
+	</logger>
+	<logger name="com.kh.spring.common.aop.AfterReturningAspect" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="myConsole"/>
+	</logger>
 	<!-- interceptor -->
 	<logger name="com.kh.spring.common.interceptor.LoginInterceptor" additivity="false">
 		<level value="debug" />
@@ -166,6 +173,7 @@
 		<level value="debug" />
 		<appender-ref ref="loginFile"/>
 	</logger>
+	
 	<!-- Root Logger -->
 	<!-- 
 		* Root Logger
