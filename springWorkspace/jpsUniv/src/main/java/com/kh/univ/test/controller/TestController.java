@@ -25,38 +25,54 @@ import com.kh.univ.test.model.vo.Test;
 
 @Controller
 public class TestController {
-	@Autowired
-	private TestService tService;
-	
-	@ResponseBody
-	@RequestMapping(value = "test1.do", produces = "application/json; charsert=utf-8")
-	public void selectList(HttpServletResponse response) throws JsonIOException, IOException {
+    @Autowired
+    private TestService tService;
 
-		ArrayList<Test> list = tService.selectList();
-		System.out.println(list);
-		Gson gson = new GsonBuilder().create();
-		gson.toJson(list,response.getWriter());
-	}
-	@ResponseBody
-	@RequestMapping(value = "test2.do", produces = "application/json; charset=utf-8")
-	public String selectList2() throws JsonProcessingException {
-		ArrayList<Test> list = tService.selectList();
-		System.out.println(list);
-		ObjectMapper mapper = new ObjectMapper();
+    @RequestMapping("test1.do")
+    public void selectList(HttpServletResponse response) throws JsonIOException, IOException {
 
-		String jsonStr = mapper.writeValueAsString(list);
-		System.out.println(jsonStr);
-		return jsonStr;
-	}
-	@ResponseBody
-	@RequestMapping("test3.do")
-	public Object selectList3(HttpServletRequest request, HttpServletResponse response,
-							  @ModelAttribute("testVO") Test testVO){
-		Map<String, Object> mp = new HashMap<String, Object>();
-		mp.put("data", tService.selectList());
+        ArrayList<Test> list = tService.selectList();
+        response.setContentType("application/json; charset=utf-8");
+        System.out.println(list);
+        Gson gson = new GsonBuilder().create();
+        gson.toJson(list, response.getWriter());
+    }
 
-		Object result = mp;
-		System.out.println(result);
-		return result;
-	}
+    @ResponseBody
+    @RequestMapping(value = "test2.do", produces = "application/json; charset=utf-8")
+    public String selectList2() throws JsonProcessingException {
+        ArrayList<Test> list = tService.selectList();
+        System.out.println(list);
+        ObjectMapper mapper = new ObjectMapper();
+
+        String jsonStr = mapper.writeValueAsString(list);
+        System.out.println(jsonStr);
+        return jsonStr;
+    }
+
+    @ResponseBody
+    @RequestMapping("test3.do")
+    public Object selectList3(HttpServletRequest request, HttpServletResponse response,
+                              @ModelAttribute("testVO") Test testVO) {
+        Map<String, Object> mp = new HashMap<String, Object>();
+        mp.put("data", tService.selectList());
+
+        Object result = mp;
+        System.out.println(result);
+        return result;
+    }
+
+    @RequestMapping(value = "test4.do")
+    public @ResponseBody
+    Object getRecordList(HttpServletRequest request,
+                         HttpServletResponse response,
+                         @ModelAttribute("testVO") Test testVO) {
+
+        Map<String, Object> mp = new HashMap<String, Object>();
+        mp.put("data", tService.selectList());
+
+        Object result = mp;
+        System.out.println(result);
+        return result;
+    }
 }

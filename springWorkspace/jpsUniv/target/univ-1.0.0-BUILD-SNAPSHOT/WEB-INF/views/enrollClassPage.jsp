@@ -38,19 +38,39 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div>
-                                <div id="enrollCard" class="card left active" style="background-color: black; float: left; width: 50%; height: 100%; text-align: center;" >수강신청</div>
-                                <div id="basketCard" class="card right" style="background-color: deeppink; float: right; width: 50%; height: 100%;text-align: center;">장바구니</div>
+                                <div id="enrollCard" class="card left active" style="float: left; width: 50%; height: 100%; text-align: center;" >수강신청</div>
+                                <div id="basketCard" class="card right" style="float: right; width: 50%; height: 100%;text-align: center;">장바구니</div>
                             </div>
                             <script>
                                 $(document).ready(function(){
+                                    $('#enrollCard').css({
+                                        "background-color":"darkgray",
+                                        "color":"white"
+                                    });
                                     $('.show1').show();
                                     $('.show2').hide();
                                     $('#basketCard').click(function(){
                                         $('.show1').hide();
                                         $('.show2').show();
+                                        $('#basketCard').css({
+                                            "background-color":"darkgray",
+                                            "color":"white"
+                                        });
+                                        $('#enrollCard').css({
+                                            "background-color":"white",
+                                            "color":"darkgray"
+                                        });
                                         return false;
                                     });
                                     $('#enrollCard').click(function(){
+                                        $('#enrollCard').css({
+                                            "background-color":"darkgray",
+                                            "color":"white"
+                                        });
+                                        $('#basketCard').css({
+                                            "background-color":"white",
+                                            "color":"darkgray"
+                                        });
                                         $('.show1').show();
                                         $('.show2').hide();
                                         return false;
@@ -78,9 +98,9 @@
                                                 <option value="E">일선</option>
                                             </select>
                                         </td>
-                                        <th><label class="labelPadding">입력검색</label></th>
-                                        <td><input type="text" name="" value="" placeholder="교과목명 입력">
-                                            <button id="search" type="button" class="btn btn-primary btn-sm">검색</button>
+                                        <th><label for="inputSubject" class="labelPadding">입력검색</label></th>
+                                        <td><input  type="text" id="inputSubject" name="inputSubject" value="" placeholder="교과목명 입력">
+                                            <button id="searchBtn" type="button" class="btn btn-primary btn-sm">테스트</button>
                                         </td>
                                     </tr>
                                     <tr id="cond02">
@@ -127,7 +147,7 @@
                                 </table>
                                 <div class="table-responsive">
 
-                                    <table id="userTable" class="table table-striped table-bordered table-hover">
+                                    <table id="userTable" class="table table-striped table-bordered table-hover" style="display: none">
                                         <thead>
                                         <tr>
                                             <th>No</th>
@@ -142,8 +162,100 @@
                                         </tr>
                                         </thead>
                                         <!-- tbody 태그 필요 없다. -->
+                                        <tbody></tbody>
                                     </table>
+                                    <table id="rtb" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>이름</th>
+                                            <th>이메일</th>
+                                            <th>핸드폰</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
 
+                                        </tbody>
+                                    </table>
+                                    <table id="rtb2" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>이름</th>
+                                            <th>이메일</th>
+                                            <th>핸드폰</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                    <script>
+
+                                        $(document).ready(function() {
+                                            alert("페이지뜸");
+                                            $('#rtb2').DataTable({
+                                                scrollY:500,
+                                                ajax: {
+                                                    "type" : "POST",
+                                                    "url" : "test3.do",
+                                                    "dataType": "JSON"
+                                                },
+                                                columns: [
+                                                    { data: "no" },
+                                                    { data: "name" },
+                                                    { data: "email" },
+                                                    { data: "phone" }
+                                                ]
+                                            });
+                                        } );
+
+
+                                        $('#searchBtn').click(function () {
+                                            getTestList();
+                                        });
+
+                                        function getTestList() {
+
+                                            $.ajax({
+                                                url:"test1.do",
+                                                dataType:"json",
+                                                success:function (data) {
+                                                    console.log(data);
+                                                    $tableBody = $('#rtb tbody');
+                                                    $tableBody.html("");
+                                                    var $tr;
+                                                    var $no;
+                                                    var $name;
+                                                    var $email;
+                                                    var $phone;
+
+                                                    if (data.length > 0){
+                                                        for(var i in data){
+                                                            $tr = $('<tr>');
+                                                            $no = $('<td>').text(data[i].no);
+                                                            $name = $('<td>').text(data[i].name);
+                                                            $email = $('<td>').text(data[i].email);
+                                                            $phone = $('<td>').text(data[i].phone);
+
+                                                            $tr.append($no);
+                                                            $tr.append($name);
+                                                            $tr.append($email);
+                                                            $tr.append($phone);
+                                                            $tableBody.append($tr);
+                                                        }
+                                                    }else{
+                                                        $tr = $('<tr>');
+                                                        $name = $('<td>').text("데이터가 없습니다.");
+                                                        $tr.append($name);
+                                                        $tableBody.append($tr);
+                                                    }
+                                                },error: function () {
+                                                    alert("error!");
+                                                }
+                                            });
+                                        }
+                                    </script>
 
                                 </div>
                             </div>
