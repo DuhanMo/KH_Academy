@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,18 +16,19 @@
     </style>
 </head>
 <body id="page-top">
+
     <%--<c:import url="common/menubar.jsp" />--%>
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <c:import url="common/sidebar.jsp"/>
+        <c:import url="../common/sidebar.jsp"/>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
             <div id="content">
                 <!-- Topbar -->
-                <c:import url="common/topbar.jsp"/>
+                <c:import url="../common/topbar.jsp"/>
                 <!-- End of Topbar -->
                 <div class="container-fluid">
 
@@ -189,6 +191,7 @@
                                                 dataType:"json",
                                                 success:function (data) {
                                                     console.log(data);
+                                                    var x = document.getElementById("myCheck");
                                                     $tableBody = $('#rtb tbody');
                                                     $tableBody.html("");
                                                     var $tr;
@@ -230,7 +233,7 @@
 
                     </div>
                     <!-- Footer -->
-                    <c:import url="common/footer.jsp"/>
+                    <c:import url="../common/footer.jsp"/>
                     <!-- End of Footer -->
                 </div>
                 <!-- End of Content Wrapper -->
@@ -240,6 +243,6 @@
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"> <i class="fas fa-angle-up"></i></a>
         <!-- Logout Modal-->
-        <c:import url="common/logoutModal.jsp"/>
+        <c:import url="../common/logoutModal.jsp"/>
 </body>
 </html>
