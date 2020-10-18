@@ -42,7 +42,6 @@ public class TestController {
     @RequestMapping(value = "test2.do", produces = "application/json; charset=utf-8")
     public String selectList2() throws JsonProcessingException {
         ArrayList<Test> list = tService.selectList();
-        System.out.println(list);
         ObjectMapper mapper = new ObjectMapper();
 
         String jsonStr = mapper.writeValueAsString(list);

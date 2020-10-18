@@ -55,8 +55,7 @@
     <%--<c:import url="common/menubar.jsp" />--%>
     <!-- Page Wrapper -->
     <div id="wrapper">
-        <!-- Sidebar -->
-        <c:import url="../common/sidebar.jsp"/>
+        <!-- Sidebar --;l<c:import url="../common/sidebar.jsp"/>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">

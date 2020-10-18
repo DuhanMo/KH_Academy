@@ -23,14 +23,151 @@
 
     <!-- Custom fonts for this template -->
     <link href="${contextPath}/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${contextPath}/resources/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
     <link href="${contextPath}/resources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <%--    <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />--%>
+    <style>
+        .labelPadding {
+            padding-top: 10px;
+        }
 
+        td.dt-body-center {
+            text-align: center;
+        }
+    </style>
+    <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#searchBtn').click(function () {
+                // $.ajax({
+                //     url: 'test1.do',
+                //     method: 'post',
+                //     dataType: 'json',
+                //     success: function (data) {
+                //
+                //          table = $('#testTb').dataTable({
+                //             retrieve: true,
+                //             lengthChange: false,
+                //             pageLength: 10,
+                //             paging: true,
+                //             searching: false,
+                //             data: data,
+                //             columns: [
+                //                 {'data': 'no'},
+                //                 {'data': 'name'},
+                //                 {'data': 'email'},
+                //                 {'data': 'phone'}
+                //             ],
+                //             columnDefs: [
+                //                 {
+                //                     targets: 0,
+                //                     searchable: false,
+                //                     visible: true,
+                //                     orderable: false,
+                //                     className: 'dt-body-center',
+                //                     render: function (data, type, full, meta) {
+                //                         return '<input type="checkbox" name="id[]" value="'+$('<div/>').text(data).html()+'">';
+                //                     }
+                //                 }
+                //             ],
+                //             order: [1,'asc']
+                //         });
+                //     }, error: function () {
+                //         alert("에러 !")
+                //     }
+                // });
+                var table = $('#testTb').DataTable({
+                    'ajax': {
+                        'url': 'test2.do',
+                        'type': 'post',
+                        'dataType': 'json',
+                        'dataSrc': ''
+                    },
+                    'columns': [
+                        {'data': 'no'},
+                        {'data': 'name'},
+                        {'data': 'email'},
+                        {'data': 'phone'}
+                    ],
+                    'columnDefs': [{
+                        'targets': 0,
+                        'searchable': false,
+                        'orderable': false,
+                        'className': 'dt-body-center',
+                        'render': function (data, type, full, meta) {
+                            return '<input type="checkbox" name="id[]" value="'
+                                + $('<div/>').text(data).html() + '">';
+                        }
+                    }],
+                    'order': [1, 'asc']
+                });
+
+                // Handle click on "Select all" control
+                $('#example-select-all').on('click', function () {
+                    // Check/uncheck all checkboxes in the table
+                    var rows = table.rows({'search': 'applied'}).nodes();
+                    $('input[type="checkbox"]', rows).prop('checked', this.checked);
+                });
+
+                // Handle click on checkbox to set state of "Select all" control
+                $('#testTb tbody').on('change', 'input[type="checkbox"]', function () {
+                    // If checkbox is not checked
+                    if (!this.checked) {
+                        var el = $('#example-select-all').get(0);
+                        // If "Select all" control is checked and has 'indeterminate' property
+                        if (el && el.checked && ('indeterminate' in el)) {
+                            // Set visual state of "Select all" control
+                            // as 'indeterminate'
+                            el.indeterminate = true;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#enrollCard').css({
+                "background-color": "lightgrey",
+                "color": "white"
+            });
+            $('.enroll').show();
+            $('.basket').hide();
+            $('#basketCard').click(function () {
+                $('.enroll').hide();
+                $('.basket').show();
+                $('#basketCard').css({
+                    "background-color": "lightgrey",
+                    "color": "white"
+                });
+                $('#enrollCard').css({
+                    "background-color": "white",
+                    "color": "darkgray"
+                });
+                return false;
+            });
+            $('#enrollCard').click(function () {
+                $('#enrollCard').css({
+                    "background-color": "lightgrey",
+                    "color": "white"
+                });
+                $('#basketCard').css({
+                    "background-color": "white",
+                    "color": "darkgray"
+                });
+                $('.enroll').show();
+                $('.basket').hide();
+                return false;
+            });
+        });
+    </script>
 </head>
 
 <body id="page-top">
@@ -39,7 +176,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <c:import url="sidebar2.jsp"/>
+        <c:import url="../common/sidebar2.jsp"/>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -49,7 +186,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <c:import url="topbar2.jsp"/>
+                <c:import url="../common/topbar2.jsp"/>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -57,18 +194,28 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                                                                                   href="https://datatables.net">official
+                            DataTables documentation</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
+                        <div class="card-header py-3" style="height: 75px;">
                             <div>
-                                <div id="enrollCard" class="card left active" style="float: left; width: 50%; height: 100%; text-align: center;" >수강신청</div>
-                                <div id="basketCard" class="card right" style="float: right; width: 50%; height: 100%;text-align: center;">장바구니</div>
+                                <div id="enrollCard" class="card left active"
+                                     style="float: left; height: 100%; width: 50%; text-align: center;">수강신청
+                                </div>
+                                <div id="basketCard" class="card right"
+                                     style="float: right; width: 50%; height: 100%;text-align: center;">장바구니
+                                </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
+                            <div class="table-responsive basket">
+
+                            </div>
+                            <div class="table-responsive enroll">
                                 <table class="search_box">
                                     <tbody>
                                     <tr id="cond01">
@@ -87,8 +234,10 @@
                                             </select>
                                         </td>
                                         <th><label for="inputSubject" class="labelPadding">입력검색</label></th>
-                                        <td><input  type="text" id="inputSubject" name="inputSubject" value="" placeholder="교과목명 입력">
-                                            <button id="searchBtn" type="button" class="btn btn-primary btn-sm">테스트</button>
+                                        <td><input type="text" id="inputSubject" name="inputSubject" value=""
+                                                   placeholder="교과목명 입력">
+                                            <button id="searchBtn" type="button" class="btn btn-primary btn-sm">테스트
+                                            </button>
                                         </td>
                                     </tr>
                                     <tr id="cond02">
@@ -96,7 +245,7 @@
                                             <label class="labelPadding">학부(과)</label>
                                         </th>
                                         <td>
-                                            <select >
+                                            <select>
                                                 <option value="">전체</option>
                                                 <option value="">단대1</option>
                                                 <option value="">단대2</option>
@@ -106,7 +255,7 @@
                                                 <option value="">단대6</option>
                                                 <option value="">단대7</option>
                                             </select>
-                                            <select >
+                                            <select>
                                                 <option>전체</option>
                                             </select>
                                         </td>
@@ -133,7 +282,28 @@
                                     </tr>
                                     </tbody>
                                 </table>
+                                <table id="testTb" class="table table-striped table-bordered table-hover"
+                                       cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th><input name="select_all" value="1" id="example-select-all" type="checkbox"/>
+                                        </th>
+
+                                        <%--                                        <th>No</th>--%>
+                                        <th>장바구니</th>
+                                        <th>학년</th>
+                                        <th>코드</th>
+                                        <%--                                            <th>분반</th>--%>
+                                        <%--                                            <th>교과목명</th>--%>
+                                        <%--                                            <th>이수구분</th>--%>
+                                        <%--                                            <th>학점</th>--%>
+                                        <%--                                            <th>수업계획서</th>--%>
+                                    </tr>
+                                    </thead>
+                                    <!-- tbody 태그 필요 없다. -->
+                                </table>
                             </div>
+
                         </div>
                     </div>
 
@@ -144,7 +314,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <c:import url="footer2.jsp"/>
+            <c:import url="../common/footer2.jsp"/>
             <!-- End of Footer -->
 
         </div>
@@ -159,7 +329,7 @@
     </a>
 
     <!-- Logout Modal-->
-   <c:import url="logoutModal2.jsp"/>
+    <c:import url="../common/logoutModal2.jsp"/>
 
     <!-- Bootstrap core JavaScript-->
     <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>

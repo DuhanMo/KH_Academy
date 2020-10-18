@@ -12,7 +12,7 @@ public class NaviController {
 	
 	@RequestMapping("ajaxTest.do")
 	public String ajaxText() {
-		return "courseManage/newTest";
+		return "courseManage/ajaxTest";
 	}
 
 }
