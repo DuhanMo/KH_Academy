@@ -19,32 +19,35 @@
     <script>
 
         $(document).ready(function () {
-            $.ajax({
-                url: 'test1.do',
-                method: 'post',
-                dataType: 'json',
-                success: function (data) {
-                    $('#testTb').dataTable({
-                        data: data,
-                        columns: [
-                            {'data': 'no'},
-                            {'data': 'name'},
-                            {'data': 'email'},
-                            {'data': 'phone'}
-                        ]
-                    });
-                    alert(data);
-                }, error: function () {
-                    alert("에러 !")
+            $('#btn').click(function () {
+                $.ajax({
+                    url: 'test1.do',
+                    method: 'post',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#testTb').dataTable({
+                            data: data,
+                            columns: [
+                                {'data': 'no'},
+                                {'data': 'name'},
+                                {'data': 'email'},
+                                {'data': 'phone'}
+                            ]
+                        });
+                    }, error: function () {
+                        alert("에러 !")
 
-                }
+                    }
+                });
             });
         });
+
 
     </script>
 </head>
 <body>
-    <table id="testTb" class="table table-bordered">
+    <button id="btn">테스트</button>
+    <table id="testTb" class="table table-striped table-bordered table-hover">
         <thead>
         <tr>
             <th>No</th>

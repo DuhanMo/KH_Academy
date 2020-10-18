@@ -16,6 +16,13 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="${contextPath}/resources/css/sb-admin-2.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+
+  <!-- Custom styles for this page -->
+  <link href="${contextPath}/resources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 <body>
 <!-- Sidebar -->
@@ -79,6 +86,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="utilities-color.html">강의 평가</a>
             <a class="collapse-item" href="utilities-border.html">성적 이의 신청</a>
+
             <a class="collapse-item active" href="#">수강신청</a>
           </div>
         </div>
@@ -111,22 +119,22 @@
       </li>
     </ul>
     <!-- End of Sidebar --> 
-<!-- Bootstrap core JavaScript-->
-  <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>
-  <script src="${contextPath}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<%--<!-- Bootstrap core JavaScript-->--%>
+<%--  <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>--%>
+<%--  <script src="${contextPath}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
 
-  <!-- Core plugin JavaScript-->
-  <script src="${contextPath}/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+<%--  <!-- Core plugin JavaScript-->--%>
+<%--  <script src="${contextPath}/resources/vendor/jquery-easing/jquery.easing.min.js"></script>--%>
 
-  <!-- Custom scripts for all pages-->
-  <script src="${contextPath}/resources/js/sb-admin-2.min.js"></script>
+<%--  <!-- Custom scripts for all pages-->--%>
+<%--  <script src="${contextPath}/resources/js/sb-admin-2.min.js"></script>--%>
 
-  <!-- Page level plugins -->
-  <script src="${contextPath}/resources/vendor/chart.js/Chart.min.js"></script>
+<%--  <!-- Page level plugins -->--%>
+<%--&lt;%&ndash;  <script src="${contextPath}/resources/vendor/chart.js/Chart.min.js"></script>&ndash;%&gt;--%>
 
-  <!-- Page level custom scripts -->
-  <script src="${contextPath}/resources/js/demo/chart-area-demo.js"></script>
-  <script src="${contextPath}/resources/js/demo/chart-pie-demo.js"></script>
+<%--&lt;%&ndash;  <!-- Page level custom scripts -->&ndash;%&gt;--%>
+<%--&lt;%&ndash;  <script src="${contextPath}/resources/js/demo/chart-area-demo.js"></script>&ndash;%&gt;--%>
+<%--&lt;%&ndash;  <script src="${contextPath}/resources/js/demo/chart-pie-demo.js"></script>&ndash;%&gt;--%>
     
 </body>
 </html>

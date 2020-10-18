@@ -1,27 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<c:set var="contextPath" value="<%= request.getContextPath()%>"/>
 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>진포상대학교</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
+
     <style>
         .labelPadding{
             padding-top: 10px;
         }
     </style>
+    <script>
+
+        $(document).ready(function () {
+            $('#searchBtn').click(function () {
+                $.ajax({
+                    url: 'test1.do',
+                    method: 'post',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#testTb').dataTable({
+                            paging: false,
+                            searching: false,
+                            data: data,
+                            columns: [
+                                {'data': 'no'},
+                                {'data': 'name'},
+                                {'data': 'email'},
+                                {'data': 'phone'}
+                            ]
+                        });
+                    }, error: function () {
+                        alert("에러 !")
+
+                    }
+                });
+            });
+        });
+
+
+    </script>
 </head>
 <body id="page-top">
 
     <%--<c:import url="common/menubar.jsp" />--%>
     <!-- Page Wrapper -->
     <div id="wrapper">
-        <!-- Sidebar -->
-        <c:import url="../common/sidebar.jsp"/>
+        <!-- Sidebar --;l<c:import url="../common/sidebar.jsp"/>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -90,7 +124,7 @@
                                             <label class="labelPadding">교과구분</label>
                                         </th>
                                         <td>
-                                            <select style="width: 100px;">
+                                            <select>
 
                                                 <option>전체</option>
                                                 <option value="A">교필</option>
@@ -110,7 +144,7 @@
                                             <label class="labelPadding">학부(과)</label>
                                         </th>
                                         <td>
-                                            <select style="width: 200px;">
+                                            <select >
                                                 <option value="">전체</option>
                                                 <option value="">단대1</option>
                                                 <option value="">단대2</option>
@@ -120,7 +154,7 @@
                                                 <option value="">단대6</option>
                                                 <option value="">단대7</option>
                                             </select>
-                                            <select style="width: 200px;">
+                                            <select >
                                                 <option>전체</option>
                                             </select>
                                         </td>
@@ -128,7 +162,7 @@
                                             <label class="labelPadding">전공</label>
                                         </th>
                                         <td>
-                                            <select style="width: 200px;">
+                                            <select>
                                                 <option value="">-</option>
                                             </select>
                                         </td>
@@ -149,83 +183,36 @@
                                 </table>
                                 <div class="table-responsive">
 
-                                    <table id="userTable" class="table table-striped table-bordered table-hover" style="display: none">
+                                    <table id="testTb" class="table table-striped table-bordered table-hover" width="50%" cellspacing="0">
                                         <thead>
                                         <tr>
                                             <th>No</th>
                                             <th>장바구니</th>
                                             <th>학년</th>
                                             <th>코드</th>
-                                            <th>분반</th>
-                                            <th>교과목명</th>
-                                            <th>이수구분</th>
-                                            <th>학점</th>
-                                            <th>수업계획서</th>
+<%--                                            <th>분반</th>--%>
+<%--                                            <th>교과목명</th>--%>
+<%--                                            <th>이수구분</th>--%>
+<%--                                            <th>학점</th>--%>
+<%--                                            <th>수업계획서</th>--%>
                                         </tr>
                                         </thead>
                                         <!-- tbody 태그 필요 없다. -->
-                                        <tbody></tbody>
                                     </table>
-                                    <table id="rtb" class="table table-striped table-bordered table-hover">
-                                        <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>이름</th>
-                                            <th>이메일</th>
-                                            <th>핸드폰</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
+<%--                                    <table class="table table-bordered" id="testTb" width="100%" cellspacing="0">--%>
+<%--                                        <thead>--%>
+<%--                                        <tr>--%>
+<%--                                            <th>No</th>--%>
+<%--                                            <th>이름</th>--%>
+<%--                                            <th>이메일</th>--%>
+<%--                                            <th>핸드폰</th>--%>
+<%--                                        </tr>--%>
+<%--                                        </thead>--%>
+<%--                                        <tbody>--%>
 
-                                        </tbody>
-                                    </table>
-                                    <script>
-                                        $('#searchBtn').click(function () {
-                                            getTestList();
-                                        });
+<%--                                        </tbody>--%>
+<%--                                    </table>--%>
 
-                                        function getTestList() {
-
-                                            $.ajax({
-                                                url:"test1.do",
-                                                dataType:"json",
-                                                success:function (data) {
-                                                    console.log(data);
-                                                    var x = document.getElementById("myCheck");
-                                                    $tableBody = $('#rtb tbody');
-                                                    $tableBody.html("");
-                                                    var $tr;
-                                                    var $no;
-                                                    var $name;
-                                                    var $email;
-                                                    var $phone;
-
-                                                    if (data.length > 0){
-                                                        for(var i in data){
-                                                            $tr = $('<tr>');
-                                                            $no = $('<td>').text(data[i].no);
-                                                            $name = $('<td>').text(data[i].name);
-                                                            $email = $('<td>').text(data[i].email);
-                                                            $phone = $('<td>').text(data[i].phone);
-
-                                                            $tr.append($no);
-                                                            $tr.append($name);
-                                                            $tr.append($email);
-                                                            $tr.append($phone);
-                                                            $tableBody.append($tr);
-                                                        }
-                                                    }else{
-                                                        $tr = $('<tr>');
-                                                        $name = $('<td>').text("데이터가 없습니다.");
-                                                        $tr.append($name);
-                                                        $tableBody.append($tr);
-                                                    }
-                                                },error: function () {
-                                                    alert("error!");
-                                                }
-                                            });
-                                        }
-                                    </script>
 
                                 </div>
                             </div>
@@ -244,5 +231,21 @@
         <a class="scroll-to-top rounded" href="#page-top"> <i class="fas fa-angle-up"></i></a>
         <!-- Logout Modal-->
         <c:import url="../common/logoutModal.jsp"/>
+        <!-- Bootstrap core JavaScript-->
+        <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>
+        <script src="${contextPath}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="${contextPath}/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="${contextPath}/resources/js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="${contextPath}/resources/vendor/datatables/jquery.dataTables.min.js"></script>
+        <script src="${contextPath}/resources/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="${contextPath}/resources/js/demo/datatables-demo.js"></script>
 </body>
 </html>

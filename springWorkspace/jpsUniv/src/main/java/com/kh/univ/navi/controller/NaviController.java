@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NaviController {
 	@RequestMapping("enrollClassPage.do")
 	public String enrollClassPage() {
-		return "courseManage/enrollClassPage";
+		return "courseManage/enrollClassPage2";
 	}
 	
 	@RequestMapping("ajaxTest.do")
