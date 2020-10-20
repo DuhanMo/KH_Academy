@@ -8,31 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4733255f-6b1d-4ffb-a895-62176d24df4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kh/univ/navi/controller/NaviController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kh/univ/navi/controller/NaviController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kh/univ/test/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kh/univ/test/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/logoutModal.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/sidebar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/topbar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/ajaxTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/ajaxTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/enrollClassPage.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/enrollClassPage2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/enrollClassPage2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/footer2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/footer2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/logoutModal2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/logoutModal2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/sidebar2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/sidebar2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/topbar2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/topbar2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/logoutModal.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/sidebar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/topbar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/ajaxTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/ajaxTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/enrollClassPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/enrollClassPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/enrollClassPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.kh/univ/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.kh/univ/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/enrollClassPage2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/enrollClassPage2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/footer2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/logoutModal2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/sidebar2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/courseManage/topbar2.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,32 +23,45 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/ajaxTest.jsp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="422">
-                    <caret line="110" column="15" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="110" selection-end-column="15" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/enrollClassPage2.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="120" column="49" lean-forward="true" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="49" />
+            <state relative-caret-position="427">
+              <caret line="269" column="82" lean-forward="true" selection-start-line="269" selection-start-column="82" selection-end-line="269" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jpsUniv.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="89" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
             </state>
           </provider>
         </entry>
@@ -79,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/univ/test/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
-              <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -105,6 +96,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>width</find>
+      <find>select</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,8 +133,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1750" />
+    <option name="y" value="127" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -151,7 +144,83 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jpsUniv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpsUniv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="courseManage" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -280,18 +349,21 @@
       <updated>1602748605201</updated>
       <workItem from="1602748609793" duration="29327000" />
       <workItem from="1603002001259" duration="13570000" />
-      <workItem from="1603023888752" duration="979000" />
+      <workItem from="1603023888752" duration="4547000" />
+      <workItem from="1603093709703" duration="4913000" />
+      <workItem from="1603110886599" duration="369000" />
+      <workItem from="1603182452721" duration="407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43876000" />
+    <option name="totallyTimeSpent" value="53133000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989339" weight="0.22389127" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.17252396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -301,7 +373,7 @@
       <window_info id="Web" order="7" sideWeight="0.5010661" side_tool="true" weight="0.18884121" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49891067" visible="true" weight="0.24968153" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49891067" visible="true" weight="0.2031088" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,9 +448,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/footer.jsp" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/logoutModal.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/demo/chart-area-demo.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -472,20 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/univ/navi/controller/NaviController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/univ/test/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/ajaxTest.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -493,10 +548,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/univ/test/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/univ/navi/controller/NaviController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jpsUniv.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="89" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseManage/enrollClassPage2.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="120" column="49" lean-forward="true" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="49" />
+        <state relative-caret-position="427">
+          <caret line="269" column="82" lean-forward="true" selection-start-line="269" selection-start-column="82" selection-end-line="269" selection-end-column="82" />
         </state>
       </provider>
     </entry>

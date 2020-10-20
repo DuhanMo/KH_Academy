@@ -51,7 +51,6 @@
                 //     method: 'post',
                 //     dataType: 'json',
                 //     success: function (data) {
-                //
                 //          table = $('#testTb').dataTable({
                 //             retrieve: true,
                 //             lengthChange: false,
@@ -245,7 +244,7 @@
                                             <label class="labelPadding">학부(과)</label>
                                         </th>
                                         <td>
-                                            <select>
+                                            <select style="width: 100px">
                                                 <option value="">전체</option>
                                                 <option value="">단대1</option>
                                                 <option value="">단대2</option>
@@ -255,7 +254,7 @@
                                                 <option value="">단대6</option>
                                                 <option value="">단대7</option>
                                             </select>
-                                            <select>
+                                            <select style="width: 170px">
                                                 <option>전체</option>
                                             </select>
                                         </td>
@@ -263,7 +262,7 @@
                                             <label class="labelPadding">전공</label>
                                         </th>
                                         <td>
-                                            <select>
+                                            <select style="width: 200px">
                                                 <option value="">-</option>
                                             </select>
                                         </td>
@@ -303,8 +302,12 @@
                                     <!-- tbody 태그 필요 없다. -->
                                 </table>
                             </div>
-
                         </div>
+                       <div class="buttonArea card-body" align="center">
+                           <button class="btn btn-success">수강신청</button>
+
+                           <button class="btn btn-secondary">장바구니</button>
+                       </div>
                     </div>
 
                 </div>
