@@ -72,7 +72,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="utilities-color.html">강의 평가</a>
                     <a class="collapse-item" href="utilities-border.html">성적 이의 신청</a>
-                    <a class="collapse-item" href="#">수강신청</a>
+                    <a class="collapse-item" href="enrollClassPage.do">수강신청</a>
 
                 </div>
             </div>

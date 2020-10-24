@@ -42,53 +42,20 @@
         }
     </style>
     <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>
-
     <script>
         $(document).ready(function () {
+            // DB에서 데이터 뽑아와서 테이블로 출력하는 datatables 라이브러리 사용
             $('#searchBtn').click(function () {
-                // $.ajax({
-                //     url: 'test1.do',
-                //     method: 'post',
-                //     dataType: 'json',
-                //     success: function (data) {
-                //          table = $('#testTb').dataTable({
-                //             retrieve: true,
-                //             lengthChange: false,
-                //             pageLength: 10,
-                //             paging: true,
-                //             searching: false,
-                //             data: data,
-                //             columns: [
-                //                 {'data': 'no'},
-                //                 {'data': 'name'},
-                //                 {'data': 'email'},
-                //                 {'data': 'phone'}
-                //             ],
-                //             columnDefs: [
-                //                 {
-                //                     targets: 0,
-                //                     searchable: false,
-                //                     visible: true,
-                //                     orderable: false,
-                //                     className: 'dt-body-center',
-                //                     render: function (data, type, full, meta) {
-                //                         return '<input type="checkbox" name="id[]" value="'+$('<div/>').text(data).html()+'">';
-                //                     }
-                //                 }
-                //             ],
-                //             order: [1,'asc']
-                //         });
-                //     }, error: function () {
-                //         alert("에러 !")
-                //     }
-                // });
                 var table = $('#testTb').DataTable({
+                    //컨트롤러에서 보내줄 때 해당 함수의 반환형은 String이어야 하고 리스트를 뽑아온다고 하면 'dataSrc' : '' 로 해줘야함.
                     'ajax': {
                         'url': 'test2.do',
                         'type': 'post',
                         'dataType': 'json',
                         'dataSrc': ''
                     },
+                    // 'colunms' 옵션에는 각 data 에게 넘어오는 변수명(컬럼값)을 매칭해줘야함 꼭 .
+                    // 그리고 테이블만들어줄때도 넘어오는 값이 4개라면 테이블의 th 갯수도 꼭 4개. 맞춰줘야함
                     'columns': [
                         {'data': 'no'},
                         {'data': 'name'},
@@ -105,7 +72,9 @@
                                 + $('<div/>').text(data).html() + '">';
                         }
                     }],
-                    'order': [1, 'asc']
+                    'order': [1, 'asc'],
+                    'searching': false,
+                    'bDestroy': true
                 });
 
                 // Handle click on "Select all" control
@@ -131,6 +100,7 @@
             });
         });
     </script>
+<%--    수강신청,장바구니 탭 클릭 시 화면 변화--%>
     <script>
         $(document).ready(function () {
             $('#enrollCard').css({
@@ -150,6 +120,7 @@
                     "background-color": "white",
                     "color": "darkgray"
                 });
+                $('#basketBtn').hide();
                 return false;
             });
             $('#enrollCard').click(function () {
@@ -163,6 +134,7 @@
                 });
                 $('.enroll').show();
                 $('.basket').hide();
+                $('#basketBtn').show();
                 return false;
             });
         });
@@ -175,7 +147,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <c:import url="../common/sidebar2.jsp"/>
+        <c:import url="../common/sidebar.jsp"/>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -192,21 +164,17 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                                                                                   href="https://datatables.net">official
-                            DataTables documentation</a>.</p>
+                    <h1 class="h3 mb-2 text-gray-800">수강신청</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3" style="height: 75px;">
                             <div>
                                 <div id="enrollCard" class="card left active"
-                                     style="float: left; height: 100%; width: 50%; text-align: center;">수강신청
+                                     style="float: left; height: 100%; width: 50%; text-align: center; padding-top: 10px;">수강신청
                                 </div>
                                 <div id="basketCard" class="card right"
-                                     style="float: right; width: 50%; height: 100%;text-align: center;">장바구니
+                                     style="float: right; width: 50%; height: 100%;text-align: center; padding-top: 10px;">장바구니
                                 </div>
                             </div>
                         </div>
@@ -304,9 +272,9 @@
                             </div>
                         </div>
                        <div class="buttonArea card-body" align="center">
-                           <button class="btn btn-success">수강신청</button>
+                           <button id="enrollBtn" class="btn btn-success" onclick="alert('수강신청이 정상적으로 완료되었습니다.');">수강신청</button>
 
-                           <button class="btn btn-secondary">장바구니</button>
+                           <button id="basketBtn" class="btn btn-secondary" onclick="alert('장바구니에 정상적으로 담겼습니다.')">장바구니</button>
                        </div>
                     </div>
 
@@ -317,7 +285,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <c:import url="../common/footer2.jsp"/>
+            <c:import url="../common/footer.jsp"/>
             <!-- End of Footer -->
 
         </div>
@@ -332,7 +300,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <c:import url="../common/logoutModal2.jsp"/>
+    <c:import url="../common/logoutModal.jsp"/>
 
     <!-- Bootstrap core JavaScript-->
     <script src="${contextPath}/resources/vendor/jquery/jquery.min.js"></script>
