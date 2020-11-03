@@ -7,24 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28ae0149-d8b8-46d5-bd60-9b4647af0510" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/courseManage/ajaxTest.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/courseManage/newTest.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/resources/css/ui.jqgrid-bootstrap-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/resources/css/ui.jqgrid-bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/resources/css/ui.jqgrid-bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/resources/css/ui.jqgrid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/src/main/java/com/kh/univ/navi/controller/NaviController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/src/main/java/com/kh/univ/navi/controller/NaviController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/ajaxTest.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/common/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/common/sidebar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/common/topbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/common/topbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/enrollClassPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/courseManage/enrollClassPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/enrollClassPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/src/main/webapp/WEB-INF/views/courseManage/enrollClassPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/ajaxTest.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/sidebar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/topbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jpsUniv/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/common/topbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/enrollClassPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpsUniv/target/univ-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/enrollClassPage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frameWorkspace/myBatisProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../frameWorkspace/myBatisProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajaxProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajaxProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,17 +20,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/board-mapper.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/member-mapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/spring/board/controller/BoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="276" column="4" selection-start-line="276" selection-start-column="4" selection-end-line="286" selection-end-column="5" />
+            <state relative-caret-position="-2997">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -75,7 +73,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="432" />
     <option name="y" value="44" />
     <option name="width" value="960" />
@@ -87,6 +85,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,6 +144,21 @@
               <item name="springProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mappers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -173,12 +188,20 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="board" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="springProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,11 +317,14 @@
       <updated>1602746694758</updated>
       <workItem from="1602746697487" duration="799000" />
       <workItem from="1602759510295" duration="6065000" />
+      <workItem from="1603959129727" duration="204000" />
+      <workItem from="1604219320929" duration="28000" />
+      <workItem from="1604304349938" duration="864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6864000" />
+    <option name="totallyTimeSpent" value="7960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,10 +336,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="432" y="44" width="960" height="811" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.37037036" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -352,13 +378,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/spring/board/controller/BoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="276" column="4" selection-start-line="276" selection-start-column="4" selection-end-line="286" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/boardDetailView.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -366,8 +385,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/menubar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/board-mapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/member-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kh/spring/board/controller/BoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2997">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
