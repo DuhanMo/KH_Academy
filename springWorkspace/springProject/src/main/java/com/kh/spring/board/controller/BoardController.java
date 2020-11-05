@@ -66,6 +66,7 @@ public class BoardController {
 			mv.addObject("msg", "게시글 상세조회 실패").setViewName("common/errorPage");
 		}
 		return mv;
+		// commit
 	}
 
 	@RequestMapping("binsertView.do")

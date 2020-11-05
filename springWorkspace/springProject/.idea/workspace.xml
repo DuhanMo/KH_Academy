@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28ae0149-d8b8-46d5-bd60-9b4647af0510" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../frameWorkspace/myBatisProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../frameWorkspace/myBatisProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajaxProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajaxProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
